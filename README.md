@@ -12,6 +12,13 @@ grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 > **Trial version.** This build (0.1.0) works until **16/11/2026** (16 November 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
+### In short
+
+- **What it is:** a SimHub plugin that makes your bass shakers vibrate when the rear of the car starts to slide in Le Mans Ultimate.
+- **Install:** download the installer, close SimHub, run it, and enable the plugin in SimHub. The ShakeIt effect is created for you.
+- **Two settings are enough:** **Slip Start** (when it starts) and **Slip Max** (when it reaches 100%). **Pro** mode adds curve, anticipation, suspension, throttle limit and smoothing.
+- **One setup per car:** save and load named setups with one click.
+- **Everything explained below:** see the [Settings guide](#settings-guide).
 **Contents:** [How it works](#how-it-works) · [Installation](#installation) · [Settings guide](#settings-guide) ·
 [Tuning tips](#tuning-tips) · [Troubleshooting](#troubleshooting) · [For advanced users](#for-advanced-users)
 
@@ -168,6 +175,13 @@ las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **Shak
 > **Versión de prueba.** Esta versión (0.1.0) funciona hasta el **16/11/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
+### En resumen
+
+- **Qué es:** un plugin de SimHub que hace vibrar tus bass shakers cuando la zaga del coche empieza a irse en Le Mans Ultimate.
+- **Instalar:** descarga el instalador, cierra SimHub, ejecútalo y activa el plugin en SimHub. El efecto de ShakeIt se crea solo.
+- **Con dos ajustes basta:** **Slip Start** (cuándo empieza) y **Slip Max** (cuándo llega al 100%). El modo **Pro** añade curva, anticipación, suspensión, límite de gas y suavizado.
+- **Un setup por coche:** guarda y carga setups con nombre con un clic.
+- **Todo explicado más abajo:** mira la [Guía de ajustes](#guía-de-ajustes).
 **Contenido:** [Cómo funciona](#cómo-funciona) · [Instalación](#instalación) · [Guía de ajustes](#guía-de-ajustes) ·
 [Consejos de ajuste](#consejos-de-ajuste) · [Problemas frecuentes](#problemas-frecuentes) · [Para usuarios avanzados](#para-usuarios-avanzados)
 
