@@ -12,14 +12,29 @@ grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 > **Trial version.** This build (0.1.0) works until **16/11/2026** (16 November 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
+**Contents:** [How it works](#how-it-works) · [Installation](#installation) · [Settings guide](#settings-guide) ·
+[Tuning tips](#tuning-tips) · [Troubleshooting](#troubleshooting) · [For advanced users](#for-advanced-users)
+
+### How it works
+
+The plugin reads the telemetry of the two **rear tyres** from the game and measures their **slip angle**:
+how many degrees each tyre is moving sideways compared with the direction it points.
+
+1. While the car grips, the slip is small and nothing happens.
+2. When **both** rear tyres slide past **Slip Start**, the effect switches on at a low level.
+3. The more the rear slides, the stronger it gets, reaching 100% at **Slip Max**.
+4. The result is sent to ShakeIt as two values, **rear left** and **rear right**, which drive your shakers.
+
+Built-in protections (not configurable): it stays off below about 22 km/h, it is muted while the wheels are
+spinning under power (wheelspin), and it switches off if the telemetry refresh is too slow.
+
 ### What it does
 
 - Detects slip on both rear wheels, with anticipation and a wheelspin filter.
 - Limits the effect by throttle and boosts it with suspension bounce.
-- Settings tab with a **Simple** mode (Slip Start and Slip Max) and a **Pro** mode
-  (anticipation, suspension influence and smoothing).
-- **Named setups**: save one set of settings per car and load it with one click.
+- Settings tab with a **Simple** mode and a **Pro** mode, a **live view**, and **named setups per car**.
 - Creates the **LMU - Rear Slip Pro** effect in ShakeIt for you (50 Hz base, 60 Hz high, high priority).
+- English and Spanish interface.
 
 ### Requirements
 
@@ -46,29 +61,93 @@ Click *More info* and then *Run anyway*.
 
 Open it from the **Guide** button in the plugin tab.
 
+**The tab, from top to bottom**
+
+- **Loaded profile** (green, top right) – the setup that is currently loaded.
+- **Simple / Pro** – Simple shows only Slip Start and Slip Max. Pro adds the rest. Switching between them
+  never loses your values, because both modes use the same settings.
+- **ES / EN** – language of the tab. It follows Windows by default.
+- **Guide** – opens this guide in your browser.
 - **Live view** – a top-down car that swings toward the side the rear is sliding, with the output of each
-  rear wheel in %. Use it to see what your settings do while you drive.
+  rear wheel in %. Rear wheels turn from grey to orange to red as the effect grows. Use it to see what
+  your settings do while you drive.
+
+**Simple and Pro settings**
+
 - **Slip Start (°)** – how much the rear tyres must slide sideways before the effect starts.
-  Lower = it reacts earlier.
+  Lower = it reacts earlier. Default 3°.
 - **Slip Max (°)** – the slip at which the effect reaches 100%. Higher = a longer, more gradual build-up.
+  Default 12°.
 - **Progression curve** *(Pro)* – the shape between Slip Start and Slip Max. 1 = straight line.
   Below 1 the effect rises fast at first and flattens; above 1 it rises gently first and strongly at the end.
+  Default 0.5.
 - **Anticipation** *(Pro)* – a small amount of vibration (as % of the maximum) when slip grows quickly,
-  just before the effect officially starts. A "heads-up" that the rear is about to go.
+  just before the effect officially starts. A "heads-up" that the rear is about to go. Default 10%.
 - **Suspension influence** *(Pro)* – extra boost from suspension bounce, up to the percentage you set.
-  0 = no boost.
-- **Throttle limit** *(Pro)* – above this throttle the effect switches off (with a short fade).
-  100% = never. Handy if you don't want it during power oversteer.
-- **Smoothing** *(Pro)* – how fast the vibration rises and falls. **Fast** is instant and sharper,
-  **Normal** is balanced, **Soft** is slower and rounder.
-- **Setups** – save one set of settings per car. Type a name and press **Save**: if the name doesn't exist
-  it is created, if it exists it is overwritten. Click a setup to load it (it turns blue; the last one used
-  goes to the top). **Rename** edits the name in place and **Delete** asks you to press twice.
-  **Default** holds the recommended values and can't be edited.
-- **ES / EN** – language of the tab. It follows Windows by default.
-- **ShakeIt frequencies** – the effect created for you uses 50 Hz base and 60 Hz high. The tone moves toward the
-  high frequency as the effect gets stronger. If you want the build-up to be more audible, try a higher
-  "High effect frequency" in ShakeIt (for example 70 Hz). Below 50 Hz the slide is hard to read on most body shakers.
+  With 50% and a lot of bounce the output can rise up to x1.5. 0 = no boost. Default 50%.
+- **Throttle limit** *(Pro)* – above this throttle the effect switches off, with a short fade of about 5%.
+  100% = never. Handy if you don't want it during power oversteer. Default 100%.
+- **Smoothing** *(Pro)* – how fast the vibration rises and falls when slip changes.
+  **Fast** follows the car instantly and feels sharper, **Normal** is balanced, **Soft** is slower and rounder
+  but a little delayed. It scales the rise and fall times: roughly 12/29 ms (Fast), 24/58 ms (Normal) and
+  48/116 ms (Soft).
+
+**Buttons**
+
+- **Reset to defaults** – puts every setting back to the recommended values (it keeps your mode and language).
+- **Use these settings** – saves the settings now. They are also saved when SimHub closes.
+
+**Setups (per car)**
+
+Save one set of settings for each car and load it with one click.
+
+- Type a name and press **Save**: if the name doesn't exist it is created, if it exists it is overwritten.
+- Click a setup in the list to load it. The loaded one turns blue and the last one used goes to the top.
+- **Rename** edits the name in the list (Enter confirms, Esc cancels). **Delete** asks you to press twice.
+- **Default** holds the recommended values. It can't be edited, renamed or deleted.
+- A setup stores the plugin settings only. Sound card, shaker and volume live in ShakeIt.
+
+### Tuning tips
+
+1. Start with the defaults (Slip Start 3°, Slip Max 12°) and drive a few laps.
+2. Effect starts too late or too early → move **Slip Start**.
+3. Hard to feel the build-up (it seems to jump to full) → raise **Slip Max** and set the **curve** closer to 1.
+4. Want to feel the very first moment more → lower **Slip Start** a little, or raise **Anticipation**.
+5. Too nervous → **Smoothing: Soft**. Too slow → **Smoothing: Fast**.
+6. In ShakeIt the created effect uses 50 Hz base and 60 Hz high; the tone moves toward the high frequency
+   as the effect gets stronger. For a more audible build-up try a higher "High effect frequency"
+   (for example 70 Hz). Below 50 Hz the slide is hard to read on most body shakers.
+7. Watch the **Live view** while you tune: if the car swings but the percentages stay low, lower Slip Start.
+
+### Troubleshooting
+
+- **The effect is not in ShakeIt.** Open ShakeIt once, then run the installer again with SimHub closed.
+  The installer never creates a second copy if it already exists.
+- **No vibration.** Check that the plugin is enabled in SimHub, that the game is running, and that the
+  rear channels of the effect are assigned to your shakers in ShakeIt. The live view should react when the
+  rear slides.
+- **The tab says the trial expired.** This build stops working on its date. Download the latest release.
+- **The car in the live view swings to the wrong side.** Tell us in *Issues*; it is a one-line fix.
+- **"Windows protected your PC".** The installer is not code-signed. Click *More info* and *Run anyway*.
+- **The installer says SimHub is open.** Close SimHub completely (also from the tray icon) and continue.
+
+### For advanced users
+
+Properties published by the plugin (search "RearSlipPro" in SimHub):
+
+| Property | Meaning |
+|---|---|
+| `RL`, `RR` | Output for the rear left and rear right shaker (0-100) |
+| `Trial.DaysLeft` | Days left of the trial, or -1 if the build has no limit |
+| `Debug.Rate` | New telemetry readings per second |
+| `Debug.SlipRL/RR` | Slip angle per rear wheel (degrees) |
+| `Debug.GateRL/RR` | Effect gate open |
+| `Debug.TargetRL/RR` | Intensity before smoothing |
+| `Debug.Progress`, `Debug.Rise` | Progress (0-100) and slip growth (degrees/s) |
+
+The effect created in ShakeIt is a Custom effect that simply returns
+`$prop('RearSlipProPlugin.RL')` and `$prop('RearSlipProPlugin.RR')` for the rear left and rear right channels.
+
 ### Uninstall
 
 Use *Settings > Apps* in Windows. The ShakeIt effect is not removed automatically:
@@ -89,14 +168,29 @@ las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **Shak
 > **Versión de prueba.** Esta versión (0.1.0) funciona hasta el **16/11/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
+**Contenido:** [Cómo funciona](#cómo-funciona) · [Instalación](#instalación) · [Guía de ajustes](#guía-de-ajustes) ·
+[Consejos de ajuste](#consejos-de-ajuste) · [Problemas frecuentes](#problemas-frecuentes) · [Para usuarios avanzados](#para-usuarios-avanzados)
+
+### Cómo funciona
+
+El plugin lee del juego la telemetría de los dos **neumáticos traseros** y mide su **ángulo de deslizamiento
+(slip)**: cuántos grados se mueve cada neumático hacia un lado respecto a la dirección a la que apunta.
+
+1. Mientras el coche agarra, el slip es pequeño y no pasa nada.
+2. Cuando **los dos** neumáticos traseros pasan de **Slip Start**, el efecto se activa con poca intensidad.
+3. Cuanto más se va la zaga, más fuerte se vuelve, hasta el 100% en **Slip Max**.
+4. El resultado se envía a ShakeIt como dos valores, **trasera izquierda** y **trasera derecha**, que mueven tus shakers.
+
+Protecciones incluidas (no configurables): se mantiene apagado por debajo de unos 22 km/h, se silencia cuando las
+ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetría es demasiado lento.
+
 ### Qué hace
 
 - Detecta el deslizamiento de las dos ruedas traseras, con anticipación y filtro de wheelspin.
 - Limita la vibración según el gas y la refuerza con el bote de la suspensión.
-- Pestaña de ajustes con modo **Simple** (Slip Start y Slip Max) y modo **Pro**
-  (anticipación, influencia de la suspensión y suavizado).
-- **Setups con nombre** para guardar un ajuste por coche y cargarlo con un clic.
+- Pestaña de ajustes con modo **Simple** y modo **Pro**, una **vista en vivo** y **setups con nombre por coche**.
 - Crea solo el efecto **LMU - Rear Slip Pro** en ShakeIt (50 Hz base, 60 Hz alta, prioridad alta).
+- Interfaz en español e inglés.
 
 ### Requisitos
 
@@ -123,30 +217,93 @@ Pulsa *Más información* y luego *Ejecutar de todas formas*.
 
 Ábrela desde el botón **Guía** de la pestaña del plugin.
 
+**La pestaña, de arriba abajo**
+
+- **Perfil cargado** (verde, arriba a la derecha) – el setup que está cargado ahora.
+- **Simple / Pro** – Simple muestra solo Slip Start y Slip Max. Pro añade el resto. Cambiar de uno a otro
+  no pierde tus valores, porque los dos modos usan los mismos ajustes.
+- **ES / EN** – idioma de la pestaña. Por defecto sigue el de Windows.
+- **Guía** – abre esta guía en el navegador.
 - **Vista en vivo** – un coche visto desde arriba que se mueve hacia el lado al que se te va la zaga, con la
-  intensidad de cada rueda trasera en %. Sirve para ver qué hacen tus ajustes mientras conduces.
+  intensidad de cada rueda trasera en %. Las ruedas traseras pasan de gris a naranja y a rojo según crece
+  el efecto. Sirve para ver qué hacen tus ajustes mientras conduces.
+
+**Ajustes de Simple y Pro**
+
 - **Slip Start (°)** – cuánto tienen que deslizar de lado las ruedas traseras para que empiece el efecto.
-  Más bajo = reacciona antes.
+  Más bajo = reacciona antes. Por defecto 3°.
 - **Slip Max (°)** – el slip con el que el efecto llega al 100%. Más alto = una subida más larga y gradual.
+  Por defecto 12°.
 - **Curva de progresión** *(Pro)* – la forma entre Slip Start y Slip Max. 1 = línea recta.
   Menos de 1: sube rápido al principio y se aplana. Más de 1: sube suave al principio y fuerte al final.
+  Por defecto 0,5.
 - **Anticipación** *(Pro)* – una pequeña vibración (en % del máximo) cuando el slip crece rápido, justo antes de
-  que empiece el efecto. Es un aviso de que la zaga está a punto de irse.
+  que empiece el efecto. Es un aviso de que la zaga está a punto de irse. Por defecto 10%.
 - **Influencia de suspensión** *(Pro)* – refuerzo extra por el bote de la suspensión, hasta el porcentaje que
-  pongas. 0 = sin refuerzo.
-- **Límite de gas** *(Pro)* – con más gas que este valor el efecto se apaga (con una transición corta).
-  100% = nunca. Útil si no lo quieres durante el sobreviraje por potencia.
-- **Suavizado** *(Pro)* – con qué rapidez sube y baja la vibración. **Rápido** es instantáneo y más seco,
-  **Normal** es equilibrado y **Suave** es más lento y redondo.
-- **Setups** – guarda un ajuste por coche. Escribe un nombre y pulsa **Guardar**: si no existe se crea y si
-  existe se sobrescribe. Haz clic en un setup para cargarlo (se pone en azul y el último usado sube arriba).
-  **Renombrar** edita el nombre en la misma línea y **Borrar** pide pulsar dos veces.
-  **Default** tiene los valores recomendados y no se puede editar.
-- **ES / EN** – idioma de la pestaña. Por defecto sigue el de Windows.
-- **Frecuencias en ShakeIt** – el efecto que se crea usa 50 Hz base y 60 Hz alta. El tono se acerca a la
-  frecuencia alta cuando el efecto se hace más fuerte. Si quieres que la subida se note más, prueba una
-  "High effect frequency" mayor en ShakeIt (por ejemplo 70 Hz). Por debajo de 50 Hz el derrape se nota poco
-  en la mayoría de body shakers.
+  pongas. Con 50% y mucho bote la salida puede subir hasta x1,5. 0 = sin refuerzo. Por defecto 50%.
+- **Límite de gas** *(Pro)* – con más gas que este valor el efecto se apaga, con una transición corta de
+  un 5%. 100% = nunca. Útil si no lo quieres durante el sobreviraje por potencia. Por defecto 100%.
+- **Suavizado** *(Pro)* – con qué rapidez sube y baja la vibración cuando cambia el slip.
+  **Rápido** sigue al coche al instante y es más seco, **Normal** es equilibrado, **Suave** es más lento y
+  redondo pero con un pequeño retraso. Escala los tiempos de subida y bajada: aproximadamente 12/29 ms (Rápido),
+  24/58 ms (Normal) y 48/116 ms (Suave).
+
+**Botones**
+
+- **Restablecer valores** – devuelve todos los ajustes a los valores recomendados (mantiene tu modo e idioma).
+- **Usar esta configuración** – guarda los ajustes ya. También se guardan al cerrar SimHub.
+
+**Setups (por coche)**
+
+Guarda un ajuste para cada coche y cárgalo con un clic.
+
+- Escribe un nombre y pulsa **Guardar**: si no existe se crea y si existe se sobrescribe.
+- Haz clic en un setup de la lista para cargarlo. El cargado se pone en azul y el último usado sube arriba.
+- **Renombrar** edita el nombre en la propia lista (Intro confirma, Esc cancela). **Borrar** pide pulsar dos veces.
+- **Default** tiene los valores recomendados. No se puede editar, renombrar ni borrar.
+- Un setup guarda solo los ajustes del plugin. La tarjeta de sonido, el shaker y el volumen están en ShakeIt.
+
+### Consejos de ajuste
+
+1. Empieza con los valores por defecto (Slip Start 3°, Slip Max 12°) y da unas vueltas.
+2. El efecto entra demasiado tarde o demasiado pronto → mueve **Slip Start**.
+3. Cuesta notar cómo sube (parece que salta a tope) → sube **Slip Max** y acerca la **curva** a 1.
+4. Quieres notar más el primer instante → baja un poco **Slip Start** o sube **Anticipación**.
+5. Demasiado nervioso → **Suavizado: Suave**. Demasiado lento → **Suavizado: Rápido**.
+6. En ShakeIt el efecto creado usa 50 Hz base y 60 Hz alta; el tono se acerca a la frecuencia alta cuando el efecto
+   se hace más fuerte. Para una subida más audible prueba una "High effect frequency" mayor (por ejemplo 70 Hz).
+   Por debajo de 50 Hz el derrape se nota poco en la mayoría de body shakers.
+7. Mira la **Vista en vivo** mientras ajustas: si el coche se mueve pero los porcentajes se quedan bajos, baja Slip Start.
+
+### Problemas frecuentes
+
+- **El efecto no está en ShakeIt.** Abre ShakeIt una vez y vuelve a ejecutar el instalador con SimHub cerrado.
+  El instalador nunca crea una segunda copia si ya existe.
+- **No vibra.** Comprueba que el plugin está activado en SimHub, que el juego está en marcha y que los canales
+  traseros del efecto están asignados a tus shakers en ShakeIt. La vista en vivo debería reaccionar cuando la
+  zaga se va.
+- **La pestaña dice que la prueba caducó.** Esta versión deja de funcionar en su fecha. Descarga la última release.
+- **El coche de la vista en vivo se mueve hacia el lado contrario.** Avísanos en *Issues*; se corrige con una línea.
+- **"Windows protegió su PC".** El instalador no está firmado. Pulsa *Más información* y *Ejecutar de todas formas*.
+- **El instalador dice que SimHub está abierto.** Cierra SimHub del todo (también desde el icono de la bandeja).
+
+### Para usuarios avanzados
+
+Propiedades que publica el plugin (busca "RearSlipPro" en SimHub):
+
+| Propiedad | Significado |
+|---|---|
+| `RL`, `RR` | Salida para el shaker trasero izquierdo y derecho (0-100) |
+| `Trial.DaysLeft` | Días que quedan de la prueba, o -1 si la versión no tiene límite |
+| `Debug.Rate` | Lecturas nuevas de telemetría por segundo |
+| `Debug.SlipRL/RR` | Ángulo de slip de cada rueda trasera (grados) |
+| `Debug.GateRL/RR` | Puerta del efecto abierta |
+| `Debug.TargetRL/RR` | Intensidad antes del suavizado |
+| `Debug.Progress`, `Debug.Rise` | Progreso (0-100) y crecimiento del slip (grados/s) |
+
+El efecto que se crea en ShakeIt es un Custom effect que devuelve simplemente
+`$prop('RearSlipProPlugin.RL')` y `$prop('RearSlipProPlugin.RR')` para los canales trasero izquierdo y derecho.
+
 ### Desinstalar
 
 Desde *Configuración > Aplicaciones* de Windows. El efecto de ShakeIt no se borra solo:
