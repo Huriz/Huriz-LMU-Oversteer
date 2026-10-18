@@ -9,7 +9,7 @@
 A **SimHub plugin for Le Mans Ultimate** that drives your bass shakers when the rear wheels lose
 grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 
-> **Trial version.** This build (0.2.0) works until **17/11/2026** (17 November 2026). After that
+> **Version 0.2.1** works until **12/12/2026** (12 December 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
 ### In short
@@ -133,7 +133,7 @@ Save one set of settings for each car and load it with one click.
 - **No vibration.** Check that the plugin is enabled in SimHub, that the game is running, and that the
   rear channels of the effect are assigned to your shakers in ShakeIt. The live view should react when the
   rear slides.
-- **The tab says the trial expired.** This build stops working on its date. Download the latest release.
+- **The tab says this version expired.** This build stops working on its date. Download the latest release.
 - **The car in the live view swings to the wrong side.** Tell us in *Issues*; it is a one-line fix.
 - **"Windows protected your PC".** The installer is not code-signed. Click *More info* and *Run anyway*.
 - **The installer says SimHub is open.** Close SimHub completely (also from the tray icon) and continue.
@@ -145,7 +145,7 @@ Properties published by the plugin (search "RearSlipPro" in SimHub):
 | Property | Meaning |
 |---|---|
 | `RL`, `RR` | Output for the rear left and rear right shaker (0-100) |
-| `Trial.DaysLeft` | Days left of the trial, or -1 if the build has no limit |
+| `Expiry.DaysLeft` | Days left until this version expires, or -1 if the build has no limit |
 | `Debug.Rate` | New telemetry readings per second |
 | `Debug.SlipRL/RR` | Slip angle per rear wheel (degrees) |
 | `Debug.GateRL/RR` | Effect gate open |
@@ -162,7 +162,7 @@ delete it from ShakeIt if you no longer want it.
 
 ### License
 
-Copyright (c) 2026 Huriz. All rights reserved. You may use the trial version for personal use.
+Copyright (c) 2026 Huriz. All rights reserved. You may use this software for personal use.
 Redistribution and modification are not allowed.
 
 ---
@@ -172,7 +172,7 @@ Redistribution and modification are not allowed.
 Plugin de SimHub para **Le Mans Ultimate** que genera vibración en los bass shakers cuando
 las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **ShakeIt Bass Shakers**.
 
-> **Versión de prueba.** Esta versión (0.2.0) funciona hasta el **17/11/2026**. Después el efecto
+> **Versión 0.2.1.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
 ### En resumen
@@ -296,7 +296,7 @@ Guarda un ajuste para cada coche y cárgalo con un clic.
 - **No vibra.** Comprueba que el plugin está activado en SimHub, que el juego está en marcha y que los canales
   traseros del efecto están asignados a tus shakers en ShakeIt. La vista en vivo debería reaccionar cuando la
   zaga se va.
-- **La pestaña dice que la prueba caducó.** Esta versión deja de funcionar en su fecha. Descarga la última release.
+- **La pestaña dice que esta versión caducó.** Esta versión deja de funcionar en su fecha. Descarga la última release.
 - **El coche de la vista en vivo se mueve hacia el lado contrario.** Avísanos en *Issues*; se corrige con una línea.
 - **"Windows protegió su PC".** El instalador no está firmado. Pulsa *Más información* y *Ejecutar de todas formas*.
 - **El instalador dice que SimHub está abierto.** Cierra SimHub del todo (también desde el icono de la bandeja).
@@ -308,7 +308,7 @@ Propiedades que publica el plugin (busca "RearSlipPro" en SimHub):
 | Propiedad | Significado |
 |---|---|
 | `RL`, `RR` | Salida para el shaker trasero izquierdo y derecho (0-100) |
-| `Trial.DaysLeft` | Días que quedan de la prueba, o -1 si la versión no tiene límite |
+| `Expiry.DaysLeft` | Días que quedan hasta que caduque esta versión, o -1 si la versión no tiene límite |
 | `Debug.Rate` | Lecturas nuevas de telemetría por segundo |
 | `Debug.SlipRL/RR` | Ángulo de slip de cada rueda trasera (grados) |
 | `Debug.GateRL/RR` | Puerta del efecto abierta |
@@ -325,5 +325,5 @@ elimínalo desde ShakeIt si no lo quieres.
 
 ### Licencia
 
-Copyright (c) 2026 Huriz. Todos los derechos reservados. Puedes usar la versión de prueba para
+Copyright (c) 2026 Huriz. Todos los derechos reservados. Puedes usar este software para
 uso personal. No se permite redistribuirla ni modificarla.
