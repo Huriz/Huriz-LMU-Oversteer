@@ -9,13 +9,14 @@
 A **SimHub plugin for Le Mans Ultimate** that drives your bass shakers when the rear wheels lose
 grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 
-> **Version 0.2.2** works until **12/12/2026** (12 December 2026). After that
+> **Version 0.3.0** works until **12/12/2026** (12 December 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
 ### In short
 
 - **What it is:** a SimHub plugin that makes your bass shakers vibrate when the rear of the car starts to slide in Le Mans Ultimate.
 - **Install:** download the installer, close SimHub, run it, and enable the plugin in SimHub. The ShakeIt effect is created for you.
+- **Overlay:** the installer also adds an overlay to Dash Studio (Overlays tab) that shows the live view over the game and combines with any other overlay.
 - **Two settings are enough:** **Slip Start** (when it starts) and **Slip Max** (when it reaches 100%). **Pro** mode adds curve, anticipation, suspension, throttle limit and smoothing.
 - **One setup per car:** save and load named setups with one click.
 - **Everything explained below:** see the [Settings guide](#settings-guide).
@@ -40,6 +41,7 @@ spinning under power (wheelspin), and it switches off if the telemetry refresh i
 - Detects slip on both rear wheels, with anticipation and a wheelspin filter.
 - Limits the effect by throttle and boosts it with suspension bounce.
 - Settings tab with a **Simple** mode and a **Pro** mode, a **live view**, and **named setups per car**.
+- An **overlay for Dash Studio** (Overlays tab) that shows the live view over the game.
 - Creates the **LMU - Rear Slip Pro** effect in ShakeIt for you (50 Hz base, 60 Hz high, high priority).
 - English and Spanish interface.
 
@@ -63,6 +65,20 @@ If you have never opened ShakeIt, open it once and run the installer again so it
 
 Windows may show "Windows protected your PC" because the installer is not code-signed.
 Click *More info* and then *Run anyway*.
+
+### Overlay (Dash Studio)
+
+The installer adds an overlay called **LMU - Rear Slip Pro** to SimHub, so you can see the live view over the game.
+
+1. Open SimHub, go to **Dash Studio** and open the **Overlays** tab.
+2. Find **LMU - Rear Slip Pro** and add it to your overlay layout, next to any other overlays you already use.
+3. Place and size it as you like. SimHub manages its position and size.
+
+In the plugin tab, the **Dash Studio overlay** card lets you turn the image on or off and choose a dark or fully
+transparent background. It also tells you whether the template is installed.
+
+The plugin draws the overlay as an image about 15 times per second while the game is running (once per second
+otherwise). It only adds one template to SimHub: it never changes your existing overlay layouts.
 
 ### Settings guide
 
@@ -148,6 +164,8 @@ Save one set of settings for each car and load it with one click.
 - **The tab says this version expired.** This build stops working on its date. Download the latest release.
 - **The car in the live view swings to the wrong side.** Tell us in *Issues*; it is a one-line fix.
 - **"Windows protected your PC".** The installer is not code-signed. Click *More info* and *Run anyway*.
+- **The overlay is not in Dash Studio.** Close SimHub and run the installer again with the Dash Studio option ticked. The plugin tab says whether the template is installed.
+- **The overlay is empty or frozen.** Check that **Overlay image** is **On** in the plugin tab and that the game is running.
 - **The installer says SimHub is open.** Close SimHub completely (also from the tray icon) and continue.
 
 ### For advanced users
@@ -165,6 +183,7 @@ Properties published by the plugin (search "RearSlipPro" in SimHub):
 | `Debug.Progress`, `Debug.Rise` | Progress (0-100) and slip growth (degrees/s) |
 | `Debug.Steering` | Steering wheel, from -1 to 1 |
 | `Debug.ABS`, `Debug.TC` | ABS / traction control acting |
+| `Overlay.Image` | Path of the latest overlay image (used by the Dash Studio template) |
 
 The effect created in ShakeIt is a Custom effect that simply returns
 `$prop('RearSlipProPlugin.RL')` and `$prop('RearSlipProPlugin.RR')` for the rear left and rear right channels.
@@ -186,13 +205,14 @@ Redistribution and modification are not allowed.
 Plugin de SimHub para **Le Mans Ultimate** que genera vibración en los bass shakers cuando
 las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **ShakeIt Bass Shakers**.
 
-> **Versión 0.2.2.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
+> **Versión 0.3.0.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
 ### En resumen
 
 - **Qué es:** un plugin de SimHub que hace vibrar tus bass shakers cuando la zaga del coche empieza a irse en Le Mans Ultimate.
 - **Instalar:** descarga el instalador, cierra SimHub, ejecútalo y activa el plugin en SimHub. El efecto de ShakeIt se crea solo.
+- **Overlay:** el instalador añade también un overlay a Dash Studio (pestaña Overlays) que muestra la vista en vivo sobre el juego y se combina con cualquier otro overlay.
 - **Con dos ajustes basta:** **Slip Start** (cuándo empieza) y **Slip Max** (cuándo llega al 100%). El modo **Pro** añade curva, anticipación, suspensión, límite de gas y suavizado.
 - **Un setup por coche:** guarda y carga setups con nombre con un clic.
 - **Todo explicado más abajo:** mira la [Guía de ajustes](#guía-de-ajustes).
@@ -217,6 +237,7 @@ ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetr
 - Detecta el deslizamiento de las dos ruedas traseras, con anticipación y filtro de wheelspin.
 - Limita la vibración según el gas y la refuerza con el bote de la suspensión.
 - Pestaña de ajustes con modo **Simple** y modo **Pro**, una **vista en vivo** y **setups con nombre por coche**.
+- Un **overlay para Dash Studio** (pestaña Overlays) que muestra la vista en vivo sobre el juego.
 - Crea solo el efecto **LMU - Rear Slip Pro** en ShakeIt (50 Hz base, 60 Hz alta, prioridad alta).
 - Interfaz en español e inglés.
 
@@ -240,6 +261,20 @@ Si nunca has abierto ShakeIt, ábrelo una vez y vuelve a ejecutar el instalador 
 
 Windows puede mostrar el aviso "Windows protegió su PC", porque el instalador no está firmado.
 Pulsa *Más información* y luego *Ejecutar de todas formas*.
+
+### Overlay (Dash Studio)
+
+El instalador añade a SimHub un overlay llamado **LMU - Rear Slip Pro**, para ver la vista en vivo sobre el juego.
+
+1. Abre SimHub, entra en **Dash Studio** y abre la pestaña **Overlays**.
+2. Busca **LMU - Rear Slip Pro** y añádelo a tu diseño de overlays, junto a los demás que ya uses.
+3. Colócalo y ajusta el tamaño como quieras. SimHub gestiona su posición y su tamaño.
+
+En la pestaña del plugin, la tarjeta **Overlay de Dash Studio** permite activar o apagar la imagen y elegir un fondo
+oscuro o totalmente transparente. También te dice si la plantilla está instalada.
+
+El plugin dibuja el overlay como una imagen unas 15 veces por segundo con el juego en marcha (una vez por segundo
+si no). Solo añade una plantilla a SimHub: nunca cambia tus diseños de overlays.
 
 ### Guía de ajustes
 
@@ -326,6 +361,8 @@ Guarda un ajuste para cada coche y cárgalo con un clic.
 - **La pestaña dice que esta versión caducó.** Esta versión deja de funcionar en su fecha. Descarga la última release.
 - **El coche de la vista en vivo se mueve hacia el lado contrario.** Avísanos en *Issues*; se corrige con una línea.
 - **"Windows protegió su PC".** El instalador no está firmado. Pulsa *Más información* y *Ejecutar de todas formas*.
+- **El overlay no sale en Dash Studio.** Cierra SimHub y vuelve a ejecutar el instalador con la casilla de Dash Studio marcada. La pestaña del plugin dice si la plantilla está instalada.
+- **El overlay sale vacío o congelado.** Comprueba que **Imagen del overlay** está **Activa** en la pestaña del plugin y que el juego está en marcha.
 - **El instalador dice que SimHub está abierto.** Cierra SimHub del todo (también desde el icono de la bandeja).
 
 ### Para usuarios avanzados
@@ -343,6 +380,7 @@ Propiedades que publica el plugin (busca "RearSlipPro" en SimHub):
 | `Debug.Progress`, `Debug.Rise` | Progreso (0-100) y crecimiento del slip (grados/s) |
 | `Debug.Steering` | Volante, de -1 a 1 |
 | `Debug.ABS`, `Debug.TC` | ABS / control de tracción actuando |
+| `Overlay.Image` | Ruta de la última imagen del overlay (la usa la plantilla de Dash Studio) |
 
 El efecto que se crea en ShakeIt es un Custom effect que devuelve simplemente
 `$prop('RearSlipProPlugin.RL')` y `$prop('RearSlipProPlugin.RR')` para los canales trasero izquierdo y derecho.
