@@ -9,7 +9,7 @@
 A **SimHub plugin for Le Mans Ultimate** that drives your bass shakers when the rear wheels lose
 grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 
-> **Trial version.** This build (0.1.0) works until **16/11/2026** (16 November 2026). After that
+> **Trial version.** This build (0.2.0) works until **17/11/2026** (17 November 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
 ### In short
@@ -70,7 +70,7 @@ Open it from the **Guide** button in the plugin tab.
 
 **The tab, from top to bottom**
 
-- **Loaded profile** (green, top right) – the setup that is currently loaded.
+- **Loaded profile** (green, next to the title) – the setup that is currently loaded.
 - **Simple / Pro** – Simple shows only Slip Start and Slip Max. Pro adds the rest. Switching between them
   never loses your values, because both modes use the same settings.
 - **ES / EN** – language of the tab. It follows Windows by default.
@@ -109,7 +109,7 @@ Open it from the **Guide** button in the plugin tab.
 Save one set of settings for each car and load it with one click.
 
 - Type a name and press **Save**: if the name doesn't exist it is created, if it exists it is overwritten.
-- Click a setup in the list to load it. The loaded one turns blue and the last one used goes to the top.
+- Click a setup in the list to load it. The loaded one turns blue. The list keeps a fixed order: Default first, then alphabetical.
 - **Rename** edits the name in the list (Enter confirms, Esc cancels). **Delete** asks you to press twice.
 - **Default** holds the recommended values. It can't be edited, renamed or deleted.
 - A setup stores the plugin settings only. Sound card, shaker and volume live in ShakeIt.
@@ -172,7 +172,7 @@ Redistribution and modification are not allowed.
 Plugin de SimHub para **Le Mans Ultimate** que genera vibración en los bass shakers cuando
 las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **ShakeIt Bass Shakers**.
 
-> **Versión de prueba.** Esta versión (0.1.0) funciona hasta el **16/11/2026**. Después el efecto
+> **Versión de prueba.** Esta versión (0.2.0) funciona hasta el **17/11/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
 ### En resumen
@@ -233,7 +233,7 @@ Pulsa *Más información* y luego *Ejecutar de todas formas*.
 
 **La pestaña, de arriba abajo**
 
-- **Perfil cargado** (verde, arriba a la derecha) – el setup que está cargado ahora.
+- **Perfil cargado** (verde, junto al título) – el setup que está cargado ahora.
 - **Simple / Pro** – Simple muestra solo Slip Start y Slip Max. Pro añade el resto. Cambiar de uno a otro
   no pierde tus valores, porque los dos modos usan los mismos ajustes.
 - **ES / EN** – idioma de la pestaña. Por defecto sigue el de Windows.
@@ -272,7 +272,7 @@ Pulsa *Más información* y luego *Ejecutar de todas formas*.
 Guarda un ajuste para cada coche y cárgalo con un clic.
 
 - Escribe un nombre y pulsa **Guardar**: si no existe se crea y si existe se sobrescribe.
-- Haz clic en un setup de la lista para cargarlo. El cargado se pone en azul y el último usado sube arriba.
+- Haz clic en un setup de la lista para cargarlo. El cargado se pone en azul. La lista tiene un orden fijo: Default primero y el resto por orden alfabético.
 - **Renombrar** edita el nombre en la propia lista (Intro confirma, Esc cancela). **Borrar** pide pulsar dos veces.
 - **Default** tiene los valores recomendados. No se puede editar, renombrar ni borrar.
 - Un setup guarda solo los ajustes del plugin. La tarjeta de sonido, el shaker y el volumen están en ShakeIt.
