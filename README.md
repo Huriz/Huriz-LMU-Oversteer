@@ -9,7 +9,7 @@
 A **SimHub plugin for Le Mans Ultimate** that drives your bass shakers when the rear wheels lose
 grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 
-> **Version 0.2.1** works until **12/12/2026** (12 December 2026). After that
+> **Version 0.2.2** works until **12/12/2026** (12 December 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
 ### In short
@@ -75,9 +75,16 @@ Open it from the **Guide** button in the plugin tab.
   never loses your values, because both modes use the same settings.
 - **ES / EN** – language of the tab. It follows Windows by default.
 - **Guide** – opens this guide in your browser.
-- **Live view** – a top-down car that swings toward the side the rear is sliding, with the output of each
-  rear wheel in %. Rear wheels turn from grey to orange to red as the effect grows. Use it to see what
-  your settings do while you drive.
+- **Live view** – shows what is happening while you drive. It has two cars on the same centre:
+  the **light grey car** points where your wheels point (it follows your steering), and the
+  **coloured-outline car** is how the car is really going. The coloured car turns the same angle as the grey
+  one **plus** whatever it slides extra; that extra, in degrees, is written in the middle of the car and drawn as
+  an arc. The two dots on each side of the arc mark your **Slip Start** and **Slip Max** (for example 3° and 12°).
+  - **RL / RR numbers** (**TI / TD** in Spanish) – output of the rear left and rear right wheel in %.
+    The rear wheels and the car outline go from grey to orange to red as the effect grows.
+  - **ABS and TC** – the front axle lights up green with "ABS", and the rear axle with "TC", while they act.
+  - **Road** – a curved road behind the cars. It bends the way you turn the wheel and its stripes move with speed.
+  - **Expand** – shows only the live view, full size, with a **Close** button (Esc also closes it).
 
 **Simple and Pro settings**
 
@@ -98,6 +105,11 @@ Open it from the **Guide** button in the plugin tab.
   **Fast** follows the car instantly and feels sharper, **Normal** is balanced, **Soft** is slower and rounder
   but a little delayed. It scales the rise and fall times: roughly 12/29 ms (Fast), 24/58 ms (Normal) and
   48/116 ms (Soft).
+- **Road** – shows or hides the road behind the cars in the live view. It is in both Simple and Pro.
+- **Slide direction** *(Pro)* – inverts which way the coloured-outline car swings. Choose **Inverted** if it
+  swings the opposite way to the rear sliding. It only changes the live view.
+- **Steering direction** *(Pro)* – inverts which way the grey car and the road turn. Choose **Inverted** if
+  they turn opposite to your steering wheel. It only changes the live view.
 
 **Buttons**
 
@@ -151,6 +163,8 @@ Properties published by the plugin (search "RearSlipPro" in SimHub):
 | `Debug.GateRL/RR` | Effect gate open |
 | `Debug.TargetRL/RR` | Intensity before smoothing |
 | `Debug.Progress`, `Debug.Rise` | Progress (0-100) and slip growth (degrees/s) |
+| `Debug.Steering` | Steering wheel, from -1 to 1 |
+| `Debug.ABS`, `Debug.TC` | ABS / traction control acting |
 
 The effect created in ShakeIt is a Custom effect that simply returns
 `$prop('RearSlipProPlugin.RL')` and `$prop('RearSlipProPlugin.RR')` for the rear left and rear right channels.
@@ -172,7 +186,7 @@ Redistribution and modification are not allowed.
 Plugin de SimHub para **Le Mans Ultimate** que genera vibración en los bass shakers cuando
 las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **ShakeIt Bass Shakers**.
 
-> **Versión 0.2.1.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
+> **Versión 0.2.2.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
 ### En resumen
@@ -238,9 +252,17 @@ Pulsa *Más información* y luego *Ejecutar de todas formas*.
   no pierde tus valores, porque los dos modos usan los mismos ajustes.
 - **ES / EN** – idioma de la pestaña. Por defecto sigue el de Windows.
 - **Guía** – abre esta guía en el navegador.
-- **Vista en vivo** – un coche visto desde arriba que se mueve hacia el lado al que se te va la zaga, con la
-  intensidad de cada rueda trasera en %. Las ruedas traseras pasan de gris a naranja y a rojo según crece
-  el efecto. Sirve para ver qué hacen tus ajustes mientras conduces.
+- **Vista en vivo** – muestra lo que pasa mientras conduces. Tiene dos coches sobre el mismo centro:
+  el **coche gris claro** apunta hacia donde apuntan tus ruedas (sigue el volante) y el
+  **coche con contorno de color** es cómo va realmente el coche. El de color gira el mismo ángulo que el gris
+  **más** lo que se va de más; ese extra, en grados, sale escrito en el centro del coche y dibujado como un arco.
+  Los dos puntos a cada lado del arco marcan tu **Slip Start** y tu **Slip Max** (por ejemplo 3° y 12°).
+  - **Números TI / TD** (**RL / RR** en inglés) – intensidad de la rueda trasera izquierda y derecha en %.
+    Las ruedas traseras y el contorno del coche pasan de gris a naranja y a rojo según crece el efecto.
+  - **ABS y TC** – el eje delantero se ilumina en verde con "ABS", y el trasero con "TC", mientras actúan.
+  - **Carretera** – una carretera curva detrás de los coches. Se curva hacia donde giras el volante y sus rayas
+    avanzan con la velocidad.
+  - **Ampliar** – muestra solo la vista en vivo, en grande, con un botón **Cerrar** (Esc también la cierra).
 
 **Ajustes de Simple y Pro**
 
@@ -261,6 +283,11 @@ Pulsa *Más información* y luego *Ejecutar de todas formas*.
   **Rápido** sigue al coche al instante y es más seco, **Normal** es equilibrado, **Suave** es más lento y
   redondo pero con un pequeño retraso. Escala los tiempos de subida y bajada: aproximadamente 12/29 ms (Rápido),
   24/58 ms (Normal) y 48/116 ms (Suave).
+- **Carretera** – muestra u oculta la carretera que va detrás de los coches en la vista en vivo. Está en Simple y en Pro.
+- **Sentido del derrape** *(Pro)* – invierte hacia qué lado gira el coche con contorno de color. Elige **Invertido**
+  si gira al lado contrario al que se te va la zaga. Solo cambia la vista en vivo.
+- **Sentido del volante** *(Pro)* – invierte hacia qué lado giran el coche gris y la carretera. Elige **Invertido**
+  si giran al revés que tu volante. Solo cambia la vista en vivo.
 
 **Botones**
 
@@ -314,6 +341,8 @@ Propiedades que publica el plugin (busca "RearSlipPro" en SimHub):
 | `Debug.GateRL/RR` | Puerta del efecto abierta |
 | `Debug.TargetRL/RR` | Intensidad antes del suavizado |
 | `Debug.Progress`, `Debug.Rise` | Progreso (0-100) y crecimiento del slip (grados/s) |
+| `Debug.Steering` | Volante, de -1 a 1 |
+| `Debug.ABS`, `Debug.TC` | ABS / control de tracción actuando |
 
 El efecto que se crea en ShakeIt es un Custom effect que devuelve simplemente
 `$prop('RearSlipProPlugin.RL')` y `$prop('RearSlipProPlugin.RR')` para los canales trasero izquierdo y derecho.
