@@ -1,6 +1,8 @@
-# LMU - Rear Slip Pro
+# Huriz - LMU Oversteer
 
-[English](#english) | [Español](#español)
+*Formerly / antes: **LMU - Rear Slip Pro***
+
+[English](#english) | [Español](#español) · [Changelog](CHANGELOG.md)
 
 ---
 
@@ -9,17 +11,18 @@
 A **SimHub plugin for Le Mans Ultimate** that drives your bass shakers when the rear wheels lose
 grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 
-> **Version 0.3.0** works until **12/12/2026** (12 December 2026). After that
+> **Version 0.3.1** works until **12/12/2026** (12 December 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
 ### In short
 
 - **What it is:** a SimHub plugin that makes your bass shakers vibrate when the rear of the car starts to slide in Le Mans Ultimate.
-- **Install:** download the installer, close SimHub, run it, and enable the plugin in SimHub. The ShakeIt effect is created for you.
+- **Install:** download the installer, close SimHub, run it and choose what to install. It creates the ShakeIt effect, and the Simagic haptic effect too if you have haptic pedals.
 - **Overlay:** the installer also adds an overlay to Dash Studio (Overlays tab) that shows the live view over the game and combines with any other overlay.
 - **Two settings are enough:** **Slip Start** (when it starts) and **Slip Max** (when it reaches 100%). **Pro** mode adds curve, anticipation, suspension, throttle limit and smoothing.
 - **One setup per car:** save and load named setups with one click.
 - **Everything explained below:** see the [Settings guide](#settings-guide).
+
 **Contents:** [How it works](#how-it-works) · [Installation](#installation) · [Settings guide](#settings-guide) ·
 [Tuning tips](#tuning-tips) · [Troubleshooting](#troubleshooting) · [For advanced users](#for-advanced-users)
 
@@ -42,7 +45,8 @@ spinning under power (wheelspin), and it switches off if the telemetry refresh i
 - Limits the effect by throttle and boosts it with suspension bounce.
 - Settings tab with a **Simple** mode and a **Pro** mode, a **live view**, and **named setups per car**.
 - An **overlay for Dash Studio** (Overlays tab) that shows the live view over the game.
-- Creates the **LMU - Rear Slip Pro** effect in ShakeIt for you (50 Hz base, 60 Hz high, high priority).
+- Creates the **Huriz - LMU Oversteer** effect in ShakeIt for you (50 Hz base, 60 Hz high, high priority).
+- Optional effect for **Simagic haptic pedals**, on the throttle pedal (45 Hz base, 50 Hz high); you can change it in SimHub.
 - English and Spanish interface.
 
 ### Requirements
@@ -53,13 +57,21 @@ spinning under power (wheelspin), and it switches off if the telemetry refresh i
 
 ### Installation
 
-1. Download `RearSlipPro-Setup.exe` from the [latest release](../../releases/latest).
-2. **Close SimHub** and run the installer (it asks for administrator rights).
-3. Leave the ShakeIt effect option ticked and choose your SimHub folder
-   (the one that contains `SimHubWPF.exe`).
-4. Open SimHub and enable the **LMU - Rear Slip Pro** plugin when it asks.
-5. In ShakeIt you will find the **LMU - Rear Slip Pro** effect. Check that the rear channels
+1. Download `Huriz-LMU-Oversteer-Setup.exe` from the [latest release](../../releases/latest).
+2. **Close SimHub** and run the installer (it asks for administrator rights and uses the language of Windows).
+3. Choose your SimHub folder (the one that contains `SimHubWPF.exe`).
+4. Choose what to install:
+   - **Plugin** – always installed.
+   - **Bass shaker effect** (ShakeIt Bass Shakers) – ticked.
+   - **Simagic haptic effect** – only if SimHub has haptic pedals ("detected" in green, "not detected" in red).
+     It is created on the throttle pedal only; you can change it later in SimHub (Devices > your pedals > Effects).
+   - **Dash Studio overlay** – ticked.
+5. Open SimHub and enable the **Huriz - LMU Oversteer** plugin when it asks.
+6. In ShakeIt you will find the **Huriz - LMU Oversteer** effect. Check that the rear channels
    (Rear Left and Rear Right) are assigned to your shakers.
+
+**Updating from LMU - Rear Slip Pro:** just run the new installer. It removes the old plugin and keeps your
+settings, setups, effects, SimHub menu position and overlay layouts.
 
 If you have never opened ShakeIt, open it once and run the installer again so it can create the effect.
 
@@ -68,10 +80,10 @@ Click *More info* and then *Run anyway*.
 
 ### Overlay (Dash Studio)
 
-The installer adds an overlay called **LMU - Rear Slip Pro** to SimHub, so you can see the live view over the game.
+The installer adds an overlay called **Huriz - LMU Oversteer** to SimHub, so you can see the live view over the game.
 
 1. Open SimHub, go to **Dash Studio** and open the **Overlays** tab.
-2. Find **LMU - Rear Slip Pro** and add it to your overlay layout, next to any other overlays you already use.
+2. Find **Huriz - LMU Oversteer** and add it to your overlay layout, next to any other overlays you already use.
 3. Place and size it as you like. SimHub manages its position and size.
 
 In the plugin tab, the **Dash Studio overlay** card lets you turn the image on or off and choose a dark or fully
@@ -130,7 +142,7 @@ Open it from the **Guide** button in the plugin tab.
 **Buttons**
 
 - **Reset to defaults** – puts every setting back to the recommended values (it keeps your mode and language).
-- **Use these settings** – saves the settings now. They are also saved when SimHub closes.
+- **Save settings** – saves the settings now. They are also saved when SimHub closes.
 
 **Setups (per car)**
 
@@ -170,7 +182,7 @@ Save one set of settings for each car and load it with one click.
 
 ### For advanced users
 
-Properties published by the plugin (search "RearSlipPro" in SimHub):
+Properties published by the plugin (search "HurizOversteer" in SimHub):
 
 | Property | Meaning |
 |---|---|
@@ -186,7 +198,7 @@ Properties published by the plugin (search "RearSlipPro" in SimHub):
 | `Overlay.Image` | Path of the latest overlay image (used by the Dash Studio template) |
 
 The effect created in ShakeIt is a Custom effect that simply returns
-`$prop('RearSlipProPlugin.RL')` and `$prop('RearSlipProPlugin.RR')` for the rear left and rear right channels.
+`$prop('HurizOversteerPlugin.RL')` and `$prop('HurizOversteerPlugin.RR')` for the rear left and rear right channels.
 
 ### Uninstall
 
@@ -205,17 +217,18 @@ Redistribution and modification are not allowed.
 Plugin de SimHub para **Le Mans Ultimate** que genera vibración en los bass shakers cuando
 las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **ShakeIt Bass Shakers**.
 
-> **Versión 0.3.0.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
+> **Versión 0.3.1.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
 ### En resumen
 
 - **Qué es:** un plugin de SimHub que hace vibrar tus bass shakers cuando la zaga del coche empieza a irse en Le Mans Ultimate.
-- **Instalar:** descarga el instalador, cierra SimHub, ejecútalo y activa el plugin en SimHub. El efecto de ShakeIt se crea solo.
+- **Instalar:** descarga el instalador, cierra SimHub, ejecútalo y elige qué instalar. Crea el efecto de ShakeIt, y también el efecto háptico de Simagic si tienes pedales hápticos.
 - **Overlay:** el instalador añade también un overlay a Dash Studio (pestaña Overlays) que muestra la vista en vivo sobre el juego y se combina con cualquier otro overlay.
 - **Con dos ajustes basta:** **Slip Start** (cuándo empieza) y **Slip Max** (cuándo llega al 100%). El modo **Pro** añade curva, anticipación, suspensión, límite de gas y suavizado.
 - **Un setup por coche:** guarda y carga setups con nombre con un clic.
 - **Todo explicado más abajo:** mira la [Guía de ajustes](#guía-de-ajustes).
+
 **Contenido:** [Cómo funciona](#cómo-funciona) · [Instalación](#instalación) · [Guía de ajustes](#guía-de-ajustes) ·
 [Consejos de ajuste](#consejos-de-ajuste) · [Problemas frecuentes](#problemas-frecuentes) · [Para usuarios avanzados](#para-usuarios-avanzados)
 
@@ -238,7 +251,8 @@ ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetr
 - Limita la vibración según el gas y la refuerza con el bote de la suspensión.
 - Pestaña de ajustes con modo **Simple** y modo **Pro**, una **vista en vivo** y **setups con nombre por coche**.
 - Un **overlay para Dash Studio** (pestaña Overlays) que muestra la vista en vivo sobre el juego.
-- Crea solo el efecto **LMU - Rear Slip Pro** en ShakeIt (50 Hz base, 60 Hz alta, prioridad alta).
+- Crea solo el efecto **Huriz - LMU Oversteer** en ShakeIt (50 Hz base, 60 Hz alta, prioridad alta).
+- Efecto opcional para **pedales hápticos Simagic**, en el acelerador (45 Hz base, 50 Hz alta); puedes cambiarlo en SimHub.
 - Interfaz en español e inglés.
 
 ### Requisitos
@@ -249,13 +263,21 @@ ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetr
 
 ### Instalación
 
-1. Descarga `RearSlipPro-Setup.exe` desde la [última release](../../releases/latest).
-2. **Cierra SimHub** y ejecuta el instalador (pide permisos de administrador).
-3. Deja marcada la casilla de crear el efecto en ShakeIt y elige la carpeta de SimHub
-   (la que contiene `SimHubWPF.exe`).
-4. Abre SimHub y activa el plugin **LMU - Rear Slip Pro** cuando lo pida.
-5. En ShakeIt aparecerá el efecto **LMU - Rear Slip Pro**. Comprueba que los canales traseros
+1. Descarga `Huriz-LMU-Oversteer-Setup.exe` desde la [última release](../../releases/latest).
+2. **Cierra SimHub** y ejecuta el instalador (pide permisos de administrador y usa el idioma de Windows).
+3. Elige la carpeta de SimHub (la que contiene `SimHubWPF.exe`).
+4. Elige qué instalar:
+   - **Plugin** – siempre se instala.
+   - **Efecto para bass shakers** (ShakeIt Bass Shakers) – marcado.
+   - **Efecto háptico de Simagic** – solo si SimHub tiene pedales hápticos ("detectado" en verde, "no detectado" en rojo).
+     Se crea solo en el pedal del acelerador; puedes cambiarlo después en SimHub (Dispositivos > tus pedales > Efectos).
+   - **Overlay de Dash Studio** – marcado.
+5. Abre SimHub y activa el plugin **Huriz - LMU Oversteer** cuando lo pida.
+6. En ShakeIt aparecerá el efecto **Huriz - LMU Oversteer**. Comprueba que los canales traseros
    (Rear Left y Rear Right) están asignados a tus shakers.
+
+**Si vienes de LMU - Rear Slip Pro:** basta con ejecutar el instalador nuevo. Quita el plugin viejo y conserva tus
+ajustes, setups, efectos, posición en el menú de SimHub y diseños de overlays.
 
 Si nunca has abierto ShakeIt, ábrelo una vez y vuelve a ejecutar el instalador para que cree el efecto.
 
@@ -264,10 +286,10 @@ Pulsa *Más información* y luego *Ejecutar de todas formas*.
 
 ### Overlay (Dash Studio)
 
-El instalador añade a SimHub un overlay llamado **LMU - Rear Slip Pro**, para ver la vista en vivo sobre el juego.
+El instalador añade a SimHub un overlay llamado **Huriz - LMU Oversteer**, para ver la vista en vivo sobre el juego.
 
 1. Abre SimHub, entra en **Dash Studio** y abre la pestaña **Overlays**.
-2. Busca **LMU - Rear Slip Pro** y añádelo a tu diseño de overlays, junto a los demás que ya uses.
+2. Busca **Huriz - LMU Oversteer** y añádelo a tu diseño de overlays, junto a los demás que ya uses.
 3. Colócalo y ajusta el tamaño como quieras. SimHub gestiona su posición y su tamaño.
 
 En la pestaña del plugin, la tarjeta **Overlay de Dash Studio** permite activar o apagar la imagen y elegir un fondo
@@ -327,7 +349,7 @@ si no). Solo añade una plantilla a SimHub: nunca cambia tus diseños de overlay
 **Botones**
 
 - **Restablecer valores** – devuelve todos los ajustes a los valores recomendados (mantiene tu modo e idioma).
-- **Usar esta configuración** – guarda los ajustes ya. También se guardan al cerrar SimHub.
+- **Guardar configuración** – guarda los ajustes ya. También se guardan al cerrar SimHub.
 
 **Setups (por coche)**
 
@@ -367,7 +389,7 @@ Guarda un ajuste para cada coche y cárgalo con un clic.
 
 ### Para usuarios avanzados
 
-Propiedades que publica el plugin (busca "RearSlipPro" en SimHub):
+Propiedades que publica el plugin (busca "HurizOversteer" en SimHub):
 
 | Propiedad | Significado |
 |---|---|
@@ -383,7 +405,7 @@ Propiedades que publica el plugin (busca "RearSlipPro" en SimHub):
 | `Overlay.Image` | Ruta de la última imagen del overlay (la usa la plantilla de Dash Studio) |
 
 El efecto que se crea en ShakeIt es un Custom effect que devuelve simplemente
-`$prop('RearSlipProPlugin.RL')` y `$prop('RearSlipProPlugin.RR')` para los canales trasero izquierdo y derecho.
+`$prop('HurizOversteerPlugin.RL')` y `$prop('HurizOversteerPlugin.RR')` para los canales trasero izquierdo y derecho.
 
 ### Desinstalar
 
