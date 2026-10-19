@@ -14,6 +14,10 @@ grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 > **Version 0.3.1** works until **12/12/2026** (12 December 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
+[![Demo video: the plugin running in Le Mans Ultimate](media/demo.jpg)](media/demo.mp4)
+
+▶ [Watch the demo video](media/demo.mp4) (3:45)
+
 ### In short
 
 - **What it is:** a SimHub plugin that makes your bass shakers vibrate when the rear of the car starts to slide in Le Mans Ultimate.
@@ -219,6 +223,10 @@ las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **Shak
 
 > **Versión 0.3.1.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
+
+[![Vídeo de demostración: el plugin funcionando en Le Mans Ultimate](media/demo.jpg)](media/demo.mp4)
+
+▶ [Ver el vídeo de demostración](media/demo.mp4) (3:45)
 
 ### En resumen
 

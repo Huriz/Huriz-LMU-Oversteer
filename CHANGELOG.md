@@ -18,6 +18,7 @@
 - The **Use these settings** button is now **Save settings**.
 - Uninstalling asks you to close SimHub and removes the plugin completely.
 - Fixed accents in the Spanish texts of the installer.
+- **Fix:** **Save settings** now also saves the changes into the loaded profile (before, they were lost when that profile was loaded again). The setup name box comes filled in with the loaded profile, so **Save** overwrites it directly.
 
 ### 0.3.0
 - **Dash Studio overlay**: shows the live view over the game from the Overlays tab, combinable with any other overlay.
@@ -54,6 +55,7 @@
 - El botón **Usar esta configuración** pasa a llamarse **Guardar configuración**.
 - Al desinstalar pide cerrar SimHub y quita el plugin del todo.
 - Arreglados los acentos de los textos en español del instalador.
+- **Corrección:** **Guardar configuración** guarda también los cambios en el perfil cargado (antes se perdían al volver a cargar ese perfil). El nombre del setup aparece ya relleno con el perfil cargado, así **Guardar** lo sobrescribe directamente.
 
 ### 0.3.0
 - **Overlay para Dash Studio**: muestra la vista en vivo sobre el juego desde la pestaña Overlays y se combina con cualquier otro overlay.
