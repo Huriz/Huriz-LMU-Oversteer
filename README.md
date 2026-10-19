@@ -14,9 +14,9 @@ grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 > **Version 0.3.1** works until **12/12/2026** (12 December 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
-[![Demo video: the plugin running in Le Mans Ultimate](media/demo-2m33.webp)](media/demo.mp4)
+[![Demo video: the plugin running in Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
 
-▶ [Watch the full video](media/demo.mp4) (3:45, with the settings and the drive)
+▶ [Watch the full video on YouTube](https://www.youtube.com/watch?v=8viDyta5et0) (3:45, with the settings and the drive)
 
 ### In short
 
@@ -224,9 +224,9 @@ las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **Shak
 > **Versión 0.3.1.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
-[![Vídeo de demostración: el plugin funcionando en Le Mans Ultimate](media/demo-2m33.webp)](media/demo.mp4)
+[![Vídeo de demostración: el plugin funcionando en Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
 
-▶ [Ver el vídeo completo](media/demo.mp4) (3:45, con los ajustes y la conducción)
+▶ [Ver el vídeo completo en YouTube](https://www.youtube.com/watch?v=8viDyta5et0) (3:45, con los ajustes y la conducción)
 
 ### En resumen
 
