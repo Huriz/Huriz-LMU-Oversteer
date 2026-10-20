@@ -93,8 +93,9 @@ The installer adds an overlay called **Huriz - LMU Oversteer** to SimHub, so you
 2. Find **Huriz - LMU Oversteer** and add it to your overlay layout, next to any other overlays you already use.
 3. Place and size it as you like. SimHub manages its position and size.
 
-In the plugin tab, the **Dash Studio overlay** card lets you turn the image on or off and tells you whether the
-template is installed. The road and the background (dark or fully transparent) are in the **Image** group of the settings.
+In the plugin tab, the **Dash Studio overlay** card lets you turn the image on or off and choose the
+**Overlay background** (dark or fully transparent). It also tells you whether the template is installed.
+The road is in the **Image** group of the settings.
 
 The plugin draws the overlay as an image about 15 times per second while the game is running (once per second
 otherwise). It only adds one template to SimHub: it never changes your existing overlay layouts.
@@ -142,8 +143,6 @@ Open it from the **Guide** button in the plugin tab.
   48/116 ms (Soft).
 - **Image** – options that only change the drawing of the live view and the overlay, never the vibration:
   - **Road** – shows or hides the road behind the cars. In both Simple and Pro.
-  - **Overlay background** – dark semi-transparent or fully transparent background for the Dash Studio overlay.
-    In both Simple and Pro.
   - **Slide direction** *(Pro)* – inverts which way the coloured-outline car swings. Choose **Inverted** if it
     swings the opposite way to the rear sliding.
   - **Steering direction** *(Pro)* – inverts which way the grey car and the road turn. Choose **Inverted** if
@@ -314,8 +313,9 @@ El instalador añade a SimHub un overlay llamado **Huriz - LMU Oversteer**, para
 2. Busca **Huriz - LMU Oversteer** y añádelo a tu diseño de overlays, junto a los demás que ya uses.
 3. Colócalo y ajusta el tamaño como quieras. SimHub gestiona su posición y su tamaño.
 
-En la pestaña del plugin, la tarjeta **Overlay de Dash Studio** permite activar o apagar la imagen y te dice si la
-plantilla está instalada. La carretera y el fondo (oscuro o totalmente transparente) están en el grupo **Imagen** de los ajustes.
+En la pestaña del plugin, la tarjeta **Overlay de Dash Studio** permite activar o apagar la imagen y elegir el
+**Fondo del overlay** (oscuro o totalmente transparente). También te dice si la plantilla está instalada.
+La carretera está en el grupo **Imagen** de los ajustes.
 
 El plugin dibuja el overlay como una imagen unas 15 veces por segundo con el juego en marcha (una vez por segundo
 si no). Solo añade una plantilla a SimHub: nunca cambia tus diseños de overlays.
@@ -364,8 +364,6 @@ si no). Solo añade una plantilla a SimHub: nunca cambia tus diseños de overlay
   24/58 ms (Normal) y 48/116 ms (Suave).
 - **Imagen** – opciones que solo cambian el dibujo de la vista en vivo y del overlay, nunca la vibración:
   - **Carretera** – muestra u oculta la carretera que va detrás de los coches. En Simple y en Pro.
-  - **Fondo del overlay** – fondo oscuro semitransparente o totalmente transparente para el overlay de Dash Studio.
-    En Simple y en Pro.
   - **Sentido del derrape** *(Pro)* – invierte hacia qué lado gira el coche con contorno de color. Elige **Invertido**
     si gira al lado contrario al que se te va la zaga.
   - **Sentido del volante** *(Pro)* – invierte hacia qué lado giran el coche gris y la carretera. Elige **Invertido**

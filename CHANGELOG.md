@@ -9,9 +9,9 @@
 ### 0.3.2
 - **Bass shakers and haptic pedals, on equal terms:** the plugin, the installer and the guide now treat both the same way.
   The installer option is now **Haptic pedal effect** (for example Simagic) and works with any haptic pedals set up in SimHub.
-- **New Image group** in the settings (Simple and Pro): **Road**, **Overlay background** and, in Pro, the slide and steering
-  directions. They only change the drawing of the live view and the overlay, never the vibration.
-- **Overlay background** moves from the Dash Studio overlay card to the Image group. The overlay card keeps the On/Off switch.
+- **New Image group** in the settings (Simple and Pro): **Road** and, in Pro, the slide and steering directions.
+  They only change the drawing of the live view and the overlay, never the vibration.
+- The overlay **Background** option is now called **Overlay background** and stays in the Dash Studio overlay card, because it only affects the overlay.
 - Guide: one body shaker is enough, and haptic pedals only go up to 50 Hz.
 
 ### 0.3.1
@@ -54,9 +54,9 @@
 ### 0.3.2
 - **Bass shakers y pedales hápticos, al mismo nivel:** el plugin, el instalador y la guía tratan los dos por igual.
   La opción del instalador pasa a ser **Efecto para pedales hápticos** (por ejemplo Simagic) y sirve para cualquier pedal háptico configurado en SimHub.
-- **Nuevo grupo Imagen** en los ajustes (Simple y Pro): **Carretera**, **Fondo del overlay** y, en Pro, los sentidos del derrape
-  y del volante. Solo cambian el dibujo de la vista en vivo y del overlay, nunca la vibración.
-- **Fondo del overlay** pasa de la tarjeta del overlay de Dash Studio al grupo Imagen. La tarjeta del overlay se queda con el interruptor On/Off.
+- **Nuevo grupo Imagen** en los ajustes (Simple y Pro): **Carretera** y, en Pro, los sentidos del derrape y del volante.
+  Solo cambian el dibujo de la vista en vivo y del overlay, nunca la vibración.
+- La opción **Fondo** del overlay pasa a llamarse **Fondo del overlay** y se queda en la tarjeta del overlay de Dash Studio, porque solo afecta al overlay.
 - Guía: basta con un body shaker, y los pedales hápticos solo llegan hasta 50 Hz.
 
 ### 0.3.1
