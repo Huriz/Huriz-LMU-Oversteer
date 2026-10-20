@@ -8,10 +8,11 @@
 
 ## English
 
-A **SimHub plugin for Le Mans Ultimate** that drives your bass shakers when the rear wheels lose
-grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
+A **SimHub plugin for Le Mans Ultimate** that makes your **bass shakers** and your **haptic pedals** vibrate
+when the rear wheels lose grip (rear-end slides). It works with **ShakeIt Bass Shakers** and with any haptic
+pedals set up in SimHub (for example Simagic).
 
-> **Version 0.3.1** works until **12/12/2026** (12 December 2026). After that
+> **Version 0.3.2** works until **12/12/2026** (12 December 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
 [![Demo video: the plugin running in Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
@@ -20,8 +21,8 @@ grip (rear-end slides). It works together with **ShakeIt Bass Shakers**.
 
 ### In short
 
-- **What it is:** a SimHub plugin that makes your bass shakers vibrate when the rear of the car starts to slide in Le Mans Ultimate.
-- **Install:** download the installer, close SimHub, run it and choose what to install. It creates the ShakeIt effect, and the Simagic haptic effect too if you have haptic pedals.
+- **What it is:** a SimHub plugin that makes your bass shakers or haptic pedals vibrate when the rear of the car starts to slide in Le Mans Ultimate.
+- **Install:** download the installer, close SimHub, run it and choose what to install. It creates the effect for bass shakers (ShakeIt) and for haptic pedals, whichever you use.
 - **Overlay:** the installer also adds an overlay to Dash Studio (Overlays tab) that shows the live view over the game and combines with any other overlay.
 - **Two settings are enough:** **Slip Start** (when it starts) and **Slip Max** (when it reaches 100%). **Pro** mode adds curve, anticipation, suspension, throttle limit and smoothing.
 - **One setup per car:** save and load named setups with one click.
@@ -38,7 +39,8 @@ how many degrees each tyre is moving sideways compared with the direction it poi
 1. While the car grips, the slip is small and nothing happens.
 2. When **both** rear tyres slide past **Slip Start**, the effect switches on at a low level.
 3. The more the rear slides, the stronger it gets, reaching 100% at **Slip Max**.
-4. The result is sent to ShakeIt as two values, **rear left** and **rear right**, which drive your shakers.
+4. The result is the vibration of the **rear axle**, which drives your bass shakers and haptic pedals.
+   **One body shaker is enough.**
 
 Built-in protections (not configurable): it stays off below about 22 km/h, it is muted while the wheels are
 spinning under power (wheelspin), and it switches off if the telemetry refresh is too slow.
@@ -49,14 +51,14 @@ spinning under power (wheelspin), and it switches off if the telemetry refresh i
 - Limits the effect by throttle and boosts it with suspension bounce.
 - Settings tab with a **Simple** mode and a **Pro** mode, a **live view**, and **named setups per car**.
 - An **overlay for Dash Studio** (Overlays tab) that shows the live view over the game.
-- Creates the **Huriz - LMU Oversteer** effect in ShakeIt for you (50 Hz base, 60 Hz high, high priority).
-- Optional effect for **Simagic haptic pedals**, on the throttle pedal (45 Hz base, 50 Hz high); you can change it in SimHub.
+- Creates the **Huriz - LMU Oversteer** effect for **bass shakers** in ShakeIt (50 Hz base, 60 Hz high, high priority).
+- Creates the same effect for **haptic pedals** (for example Simagic), on the throttle pedal (45 Hz base, 50 Hz high); you can change it in SimHub.
 - English and Spanish interface.
 
 ### Requirements
 
 - Windows 10 or 11.
-- SimHub with ShakeIt Bass Shakers already set up (sound card and shakers).
+- SimHub with your **bass shakers** (ShakeIt: sound card and shakers) and/or your **haptic pedals** already set up.
 - Le Mans Ultimate.
 
 ### Installation
@@ -67,12 +69,13 @@ spinning under power (wheelspin), and it switches off if the telemetry refresh i
 4. Choose what to install:
    - **Plugin** – always installed.
    - **Bass shaker effect** (ShakeIt Bass Shakers) – ticked.
-   - **Simagic haptic effect** – only if SimHub has haptic pedals ("detected" in green, "not detected" in red).
+   - **Haptic pedal effect** – when SimHub has haptic pedals, for example Simagic ("detected" in green, "not detected" in red).
      It is created on the throttle pedal only; you can change it later in SimHub (Devices > your pedals > Effects).
    - **Dash Studio overlay** – ticked.
 5. Open SimHub and enable the **Huriz - LMU Oversteer** plugin when it asks.
-6. In ShakeIt you will find the **Huriz - LMU Oversteer** effect. Check that the rear channels
-   (Rear Left and Rear Right) are assigned to your shakers.
+6. You will find the **Huriz - LMU Oversteer** effect:
+   - **Bass shakers:** in ShakeIt. Check that the effect reaches your shaker (one body shaker is enough).
+   - **Haptic pedals:** in SimHub > Devices > your pedals > Effects.
 
 **Updating from LMU - Rear Slip Pro:** just run the new installer. It removes the old plugin and keeps your
 settings, setups, effects, SimHub menu position and overlay layouts.
@@ -90,8 +93,8 @@ The installer adds an overlay called **Huriz - LMU Oversteer** to SimHub, so you
 2. Find **Huriz - LMU Oversteer** and add it to your overlay layout, next to any other overlays you already use.
 3. Place and size it as you like. SimHub manages its position and size.
 
-In the plugin tab, the **Dash Studio overlay** card lets you turn the image on or off and choose a dark or fully
-transparent background. It also tells you whether the template is installed.
+In the plugin tab, the **Dash Studio overlay** card lets you turn the image on or off and tells you whether the
+template is installed. The road and the background (dark or fully transparent) are in the **Image** group of the settings.
 
 The plugin draws the overlay as an image about 15 times per second while the game is running (once per second
 otherwise). It only adds one template to SimHub: it never changes your existing overlay layouts.
@@ -137,11 +140,14 @@ Open it from the **Guide** button in the plugin tab.
   **Fast** follows the car instantly and feels sharper, **Normal** is balanced, **Soft** is slower and rounder
   but a little delayed. It scales the rise and fall times: roughly 12/29 ms (Fast), 24/58 ms (Normal) and
   48/116 ms (Soft).
-- **Road** – shows or hides the road behind the cars in the live view. It is in both Simple and Pro.
-- **Slide direction** *(Pro)* – inverts which way the coloured-outline car swings. Choose **Inverted** if it
-  swings the opposite way to the rear sliding. It only changes the live view.
-- **Steering direction** *(Pro)* – inverts which way the grey car and the road turn. Choose **Inverted** if
-  they turn opposite to your steering wheel. It only changes the live view.
+- **Image** – options that only change the drawing of the live view and the overlay, never the vibration:
+  - **Road** – shows or hides the road behind the cars. In both Simple and Pro.
+  - **Overlay background** – dark semi-transparent or fully transparent background for the Dash Studio overlay.
+    In both Simple and Pro.
+  - **Slide direction** *(Pro)* – inverts which way the coloured-outline car swings. Choose **Inverted** if it
+    swings the opposite way to the rear sliding.
+  - **Steering direction** *(Pro)* – inverts which way the grey car and the road turn. Choose **Inverted** if
+    they turn opposite to your steering wheel.
 
 **Buttons**
 
@@ -156,7 +162,7 @@ Save one set of settings for each car and load it with one click.
 - Click a setup in the list to load it. The loaded one turns blue. The list keeps a fixed order: Default first, then alphabetical.
 - **Rename** edits the name in the list (Enter confirms, Esc cancels). **Delete** asks you to press twice.
 - **Default** holds the recommended values. It can't be edited, renamed or deleted.
-- A setup stores the plugin settings only. Sound card, shaker and volume live in ShakeIt.
+- A setup stores the plugin settings only. Shakers, haptic pedals and their volume are set in SimHub (ShakeIt and Devices).
 
 ### Tuning tips
 
@@ -165,18 +171,23 @@ Save one set of settings for each car and load it with one click.
 3. Hard to feel the build-up (it seems to jump to full) → raise **Slip Max** and set the **curve** closer to 1.
 4. Want to feel the very first moment more → lower **Slip Start** a little, or raise **Anticipation**.
 5. Too nervous → **Smoothing: Soft**. Too slow → **Smoothing: Fast**.
-6. In ShakeIt the created effect uses 50 Hz base and 60 Hz high; the tone moves toward the high frequency
-   as the effect gets stronger. For a more audible build-up try a higher "High effect frequency"
+6. **Bass shakers:** the effect created in ShakeIt uses 50 Hz base and 60 Hz high; the tone moves toward the high
+   frequency as the effect gets stronger. For a more audible build-up try a higher "High effect frequency"
    (for example 70 Hz). Below 50 Hz the slide is hard to read on most body shakers.
-7. Watch the **Live view** while you tune: if the car swings but the percentages stay low, lower Slip Start.
+7. **Haptic pedals:** the effect uses 45 Hz base and 50 Hz high on the throttle pedal. Haptic pedals only go up to
+   50 Hz, so don't set it higher. To change its strength or add it to another pedal, go to SimHub > Devices >
+   your pedals > Effects.
+8. Watch the **Live view** while you tune: if the car swings but the percentages stay low, lower Slip Start.
 
 ### Troubleshooting
 
 - **The effect is not in ShakeIt.** Open ShakeIt once, then run the installer again with SimHub closed.
   The installer never creates a second copy if it already exists.
-- **No vibration.** Check that the plugin is enabled in SimHub, that the game is running, and that the
-  rear channels of the effect are assigned to your shakers in ShakeIt. The live view should react when the
-  rear slides.
+- **The effect is not on my haptic pedals.** Check that SimHub sees your pedals (Devices), close SimHub and run the
+  installer again: the haptic option shows "detected" in green when it finds them.
+- **No vibration.** Check that the plugin is enabled in SimHub, that the game is running, and that the effect is
+  active: on bass shakers, the effect must reach your shaker in ShakeIt; on haptic pedals, the
+  effect must be enabled in Devices > your pedals > Effects. The live view should react when the rear slides.
 - **The tab says this version expired.** This build stops working on its date. Download the latest release.
 - **The car in the live view swings to the wrong side.** Tell us in *Issues*; it is a one-line fix.
 - **"Windows protected your PC".** The installer is not code-signed. Click *More info* and *Run anyway*.
@@ -190,7 +201,7 @@ Properties published by the plugin (search "HurizOversteer" in SimHub):
 
 | Property | Meaning |
 |---|---|
-| `RL`, `RR` | Output for the rear left and rear right shaker (0-100) |
+| `RL`, `RR` | Output of the rear axle effect (0-100), for bass shakers or haptic pedals |
 | `Expiry.DaysLeft` | Days left until this version expires, or -1 if the build has no limit |
 | `Debug.Rate` | New telemetry readings per second |
 | `Debug.SlipRL/RR` | Slip angle per rear wheel (degrees) |
@@ -201,13 +212,13 @@ Properties published by the plugin (search "HurizOversteer" in SimHub):
 | `Debug.ABS`, `Debug.TC` | ABS / traction control acting |
 | `Overlay.Image` | Path of the latest overlay image (used by the Dash Studio template) |
 
-The effect created in ShakeIt is a Custom effect that simply returns
-`$prop('HurizOversteerPlugin.RL')` and `$prop('HurizOversteerPlugin.RR')` for the rear left and rear right channels.
+The effect created in ShakeIt and on the haptic pedals is a Custom effect that simply returns
+`$prop('HurizOversteerPlugin.RL')` and `$prop('HurizOversteerPlugin.RR')` on the rear channels.
 
 ### Uninstall
 
-Use *Settings > Apps* in Windows. The ShakeIt effect is not removed automatically:
-delete it from ShakeIt if you no longer want it.
+Use *Settings > Apps* in Windows. The bass shaker and haptic pedal effects are not removed automatically:
+delete them from SimHub (ShakeIt and Devices) if you no longer want them.
 
 ### License
 
@@ -218,10 +229,11 @@ Redistribution and modification are not allowed.
 
 ## Español
 
-Plugin de SimHub para **Le Mans Ultimate** que genera vibración en los bass shakers cuando
-las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **ShakeIt Bass Shakers**.
+Plugin de SimHub para **Le Mans Ultimate** que hace vibrar tus **bass shakers** y tus **pedales hápticos** cuando
+las ruedas traseras pierden agarre (derrape de la zaga). Funciona con **ShakeIt Bass Shakers** y con cualquier
+pedal háptico configurado en SimHub (por ejemplo Simagic).
 
-> **Versión 0.3.1.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
+> **Versión 0.3.2.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
 [![Vídeo de demostración: el plugin funcionando en Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
@@ -230,8 +242,8 @@ las ruedas traseras pierden agarre (derrape de la zaga). Funciona junto a **Shak
 
 ### En resumen
 
-- **Qué es:** un plugin de SimHub que hace vibrar tus bass shakers cuando la zaga del coche empieza a irse en Le Mans Ultimate.
-- **Instalar:** descarga el instalador, cierra SimHub, ejecútalo y elige qué instalar. Crea el efecto de ShakeIt, y también el efecto háptico de Simagic si tienes pedales hápticos.
+- **Qué es:** un plugin de SimHub que hace vibrar tus bass shakers o tus pedales hápticos cuando la zaga del coche empieza a irse en Le Mans Ultimate.
+- **Instalar:** descarga el instalador, cierra SimHub, ejecútalo y elige qué instalar. Crea el efecto para bass shakers (ShakeIt) y para pedales hápticos, según lo que uses.
 - **Overlay:** el instalador añade también un overlay a Dash Studio (pestaña Overlays) que muestra la vista en vivo sobre el juego y se combina con cualquier otro overlay.
 - **Con dos ajustes basta:** **Slip Start** (cuándo empieza) y **Slip Max** (cuándo llega al 100%). El modo **Pro** añade curva, anticipación, suspensión, límite de gas y suavizado.
 - **Un setup por coche:** guarda y carga setups con nombre con un clic.
@@ -248,7 +260,8 @@ El plugin lee del juego la telemetría de los dos **neumáticos traseros** y mid
 1. Mientras el coche agarra, el slip es pequeño y no pasa nada.
 2. Cuando **los dos** neumáticos traseros pasan de **Slip Start**, el efecto se activa con poca intensidad.
 3. Cuanto más se va la zaga, más fuerte se vuelve, hasta el 100% en **Slip Max**.
-4. El resultado se envía a ShakeIt como dos valores, **trasera izquierda** y **trasera derecha**, que mueven tus shakers.
+4. El resultado es la vibración del **tren trasero**, que mueve tus bass shakers y tus pedales hápticos.
+   **Basta con un body shaker.**
 
 Protecciones incluidas (no configurables): se mantiene apagado por debajo de unos 22 km/h, se silencia cuando las
 ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetría es demasiado lento.
@@ -259,14 +272,14 @@ ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetr
 - Limita la vibración según el gas y la refuerza con el bote de la suspensión.
 - Pestaña de ajustes con modo **Simple** y modo **Pro**, una **vista en vivo** y **setups con nombre por coche**.
 - Un **overlay para Dash Studio** (pestaña Overlays) que muestra la vista en vivo sobre el juego.
-- Crea solo el efecto **Huriz - LMU Oversteer** en ShakeIt (50 Hz base, 60 Hz alta, prioridad alta).
-- Efecto opcional para **pedales hápticos Simagic**, en el acelerador (45 Hz base, 50 Hz alta); puedes cambiarlo en SimHub.
+- Crea solo el efecto **Huriz - LMU Oversteer** para **bass shakers** en ShakeIt (50 Hz base, 60 Hz alta, prioridad alta).
+- Crea el mismo efecto para **pedales hápticos** (por ejemplo Simagic), en el acelerador (45 Hz base, 50 Hz alta); puedes cambiarlo en SimHub.
 - Interfaz en español e inglés.
 
 ### Requisitos
 
 - Windows 10 u 11.
-- SimHub con ShakeIt Bass Shakers configurado (tarjeta de sonido y shakers).
+- SimHub con tus **bass shakers** (ShakeIt: tarjeta de sonido y shakers) y/o tus **pedales hápticos** configurados.
 - Le Mans Ultimate.
 
 ### Instalación
@@ -277,12 +290,13 @@ ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetr
 4. Elige qué instalar:
    - **Plugin** – siempre se instala.
    - **Efecto para bass shakers** (ShakeIt Bass Shakers) – marcado.
-   - **Efecto háptico de Simagic** – solo si SimHub tiene pedales hápticos ("detectado" en verde, "no detectado" en rojo).
+   - **Efecto para pedales hápticos** – cuando SimHub tiene pedales hápticos, por ejemplo Simagic ("detectado" en verde, "no detectado" en rojo).
      Se crea solo en el pedal del acelerador; puedes cambiarlo después en SimHub (Dispositivos > tus pedales > Efectos).
    - **Overlay de Dash Studio** – marcado.
 5. Abre SimHub y activa el plugin **Huriz - LMU Oversteer** cuando lo pida.
-6. En ShakeIt aparecerá el efecto **Huriz - LMU Oversteer**. Comprueba que los canales traseros
-   (Rear Left y Rear Right) están asignados a tus shakers.
+6. Encontrarás el efecto **Huriz - LMU Oversteer**:
+   - **Bass shakers:** en ShakeIt. Comprueba que el efecto llega a tu shaker (basta con un body shaker).
+   - **Pedales hápticos:** en SimHub > Dispositivos > tus pedales > Efectos.
 
 **Si vienes de LMU - Rear Slip Pro:** basta con ejecutar el instalador nuevo. Quita el plugin viejo y conserva tus
 ajustes, setups, efectos, posición en el menú de SimHub y diseños de overlays.
@@ -300,8 +314,8 @@ El instalador añade a SimHub un overlay llamado **Huriz - LMU Oversteer**, para
 2. Busca **Huriz - LMU Oversteer** y añádelo a tu diseño de overlays, junto a los demás que ya uses.
 3. Colócalo y ajusta el tamaño como quieras. SimHub gestiona su posición y su tamaño.
 
-En la pestaña del plugin, la tarjeta **Overlay de Dash Studio** permite activar o apagar la imagen y elegir un fondo
-oscuro o totalmente transparente. También te dice si la plantilla está instalada.
+En la pestaña del plugin, la tarjeta **Overlay de Dash Studio** permite activar o apagar la imagen y te dice si la
+plantilla está instalada. La carretera y el fondo (oscuro o totalmente transparente) están en el grupo **Imagen** de los ajustes.
 
 El plugin dibuja el overlay como una imagen unas 15 veces por segundo con el juego en marcha (una vez por segundo
 si no). Solo añade una plantilla a SimHub: nunca cambia tus diseños de overlays.
@@ -348,11 +362,14 @@ si no). Solo añade una plantilla a SimHub: nunca cambia tus diseños de overlay
   **Rápido** sigue al coche al instante y es más seco, **Normal** es equilibrado, **Suave** es más lento y
   redondo pero con un pequeño retraso. Escala los tiempos de subida y bajada: aproximadamente 12/29 ms (Rápido),
   24/58 ms (Normal) y 48/116 ms (Suave).
-- **Carretera** – muestra u oculta la carretera que va detrás de los coches en la vista en vivo. Está en Simple y en Pro.
-- **Sentido del derrape** *(Pro)* – invierte hacia qué lado gira el coche con contorno de color. Elige **Invertido**
-  si gira al lado contrario al que se te va la zaga. Solo cambia la vista en vivo.
-- **Sentido del volante** *(Pro)* – invierte hacia qué lado giran el coche gris y la carretera. Elige **Invertido**
-  si giran al revés que tu volante. Solo cambia la vista en vivo.
+- **Imagen** – opciones que solo cambian el dibujo de la vista en vivo y del overlay, nunca la vibración:
+  - **Carretera** – muestra u oculta la carretera que va detrás de los coches. En Simple y en Pro.
+  - **Fondo del overlay** – fondo oscuro semitransparente o totalmente transparente para el overlay de Dash Studio.
+    En Simple y en Pro.
+  - **Sentido del derrape** *(Pro)* – invierte hacia qué lado gira el coche con contorno de color. Elige **Invertido**
+    si gira al lado contrario al que se te va la zaga.
+  - **Sentido del volante** *(Pro)* – invierte hacia qué lado giran el coche gris y la carretera. Elige **Invertido**
+    si giran al revés que tu volante.
 
 **Botones**
 
@@ -367,7 +384,7 @@ Guarda un ajuste para cada coche y cárgalo con un clic.
 - Haz clic en un setup de la lista para cargarlo. El cargado se pone en azul. La lista tiene un orden fijo: Default primero y el resto por orden alfabético.
 - **Renombrar** edita el nombre en la propia lista (Intro confirma, Esc cancela). **Borrar** pide pulsar dos veces.
 - **Default** tiene los valores recomendados. No se puede editar, renombrar ni borrar.
-- Un setup guarda solo los ajustes del plugin. La tarjeta de sonido, el shaker y el volumen están en ShakeIt.
+- Un setup guarda solo los ajustes del plugin. Los shakers, los pedales hápticos y su volumen se ajustan en SimHub (ShakeIt y Dispositivos).
 
 ### Consejos de ajuste
 
@@ -376,18 +393,24 @@ Guarda un ajuste para cada coche y cárgalo con un clic.
 3. Cuesta notar cómo sube (parece que salta a tope) → sube **Slip Max** y acerca la **curva** a 1.
 4. Quieres notar más el primer instante → baja un poco **Slip Start** o sube **Anticipación**.
 5. Demasiado nervioso → **Suavizado: Suave**. Demasiado lento → **Suavizado: Rápido**.
-6. En ShakeIt el efecto creado usa 50 Hz base y 60 Hz alta; el tono se acerca a la frecuencia alta cuando el efecto
-   se hace más fuerte. Para una subida más audible prueba una "High effect frequency" mayor (por ejemplo 70 Hz).
-   Por debajo de 50 Hz el derrape se nota poco en la mayoría de body shakers.
-7. Mira la **Vista en vivo** mientras ajustas: si el coche se mueve pero los porcentajes se quedan bajos, baja Slip Start.
+6. **Bass shakers:** el efecto creado en ShakeIt usa 50 Hz base y 60 Hz alta; el tono se acerca a la frecuencia alta
+   cuando el efecto se hace más fuerte. Para una subida más audible prueba una "High effect frequency" mayor (por
+   ejemplo 70 Hz). Por debajo de 50 Hz el derrape se nota poco en la mayoría de body shakers.
+7. **Pedales hápticos:** el efecto usa 45 Hz base y 50 Hz alta en el acelerador. Los pedales hápticos solo llegan
+   hasta 50 Hz, así que no lo subas de ahí. Para cambiar su fuerza o añadirlo a otro pedal, ve a SimHub >
+   Dispositivos > tus pedales > Efectos.
+8. Mira la **Vista en vivo** mientras ajustas: si el coche se mueve pero los porcentajes se quedan bajos, baja Slip Start.
 
 ### Problemas frecuentes
 
 - **El efecto no está en ShakeIt.** Abre ShakeIt una vez y vuelve a ejecutar el instalador con SimHub cerrado.
   El instalador nunca crea una segunda copia si ya existe.
-- **No vibra.** Comprueba que el plugin está activado en SimHub, que el juego está en marcha y que los canales
-  traseros del efecto están asignados a tus shakers en ShakeIt. La vista en vivo debería reaccionar cuando la
-  zaga se va.
+- **El efecto no está en mis pedales hápticos.** Comprueba que SimHub ve tus pedales (Dispositivos), cierra SimHub y
+  vuelve a ejecutar el instalador: la opción de hápticos sale "detectado" en verde cuando los encuentra.
+- **No vibra.** Comprueba que el plugin está activado en SimHub, que el juego está en marcha y que el efecto está
+  activo: en bass shakers, el efecto debe llegar a tu shaker en ShakeIt; en pedales
+  hápticos, el efecto debe estar activado en Dispositivos > tus pedales > Efectos. La vista en vivo debería
+  reaccionar cuando la zaga se va.
 - **La pestaña dice que esta versión caducó.** Esta versión deja de funcionar en su fecha. Descarga la última release.
 - **El coche de la vista en vivo se mueve hacia el lado contrario.** Avísanos en *Issues*; se corrige con una línea.
 - **"Windows protegió su PC".** El instalador no está firmado. Pulsa *Más información* y *Ejecutar de todas formas*.
@@ -401,7 +424,7 @@ Propiedades que publica el plugin (busca "HurizOversteer" en SimHub):
 
 | Propiedad | Significado |
 |---|---|
-| `RL`, `RR` | Salida para el shaker trasero izquierdo y derecho (0-100) |
+| `RL`, `RR` | Salida del efecto del tren trasero (0-100), para bass shakers o pedales hápticos |
 | `Expiry.DaysLeft` | Días que quedan hasta que caduque esta versión, o -1 si la versión no tiene límite |
 | `Debug.Rate` | Lecturas nuevas de telemetría por segundo |
 | `Debug.SlipRL/RR` | Ángulo de slip de cada rueda trasera (grados) |
@@ -412,13 +435,13 @@ Propiedades que publica el plugin (busca "HurizOversteer" en SimHub):
 | `Debug.ABS`, `Debug.TC` | ABS / control de tracción actuando |
 | `Overlay.Image` | Ruta de la última imagen del overlay (la usa la plantilla de Dash Studio) |
 
-El efecto que se crea en ShakeIt es un Custom effect que devuelve simplemente
-`$prop('HurizOversteerPlugin.RL')` y `$prop('HurizOversteerPlugin.RR')` para los canales trasero izquierdo y derecho.
+El efecto que se crea en ShakeIt y en los pedales hápticos es un Custom effect que devuelve simplemente
+`$prop('HurizOversteerPlugin.RL')` y `$prop('HurizOversteerPlugin.RR')` en los canales traseros.
 
 ### Desinstalar
 
-Desde *Configuración > Aplicaciones* de Windows. El efecto de ShakeIt no se borra solo:
-elimínalo desde ShakeIt si no lo quieres.
+Desde *Configuración > Aplicaciones* de Windows. Los efectos de bass shakers y pedales hápticos no se borran solos:
+elimínalos desde SimHub (ShakeIt y Dispositivos) si no los quieres.
 
 ### Licencia
 
