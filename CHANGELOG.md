@@ -6,6 +6,28 @@
 
 ## English
 
+### 0.3.3
+- **Everything in one place**: the settings stay open and Dash Studio overlay, Bass shakers and Haptic pedals are
+  **drop-downs** you open and close. Closed, they show a summary, and the plugin remembers which ones you left open.
+- **On/off switch** in the header of each drop-down. For bass shakers and haptic pedals it turns the effect on or off
+  **directly in SimHub** (ShakeIt and Devices), so you see it there at once.
+- **Bass shakers** and **Haptic pedals**: minimum and maximum frequency with **one bar with two handles**. The plugin writes
+  them directly into the effect in SimHub (Frequency and High frequency), without forcing frequencies. Haptic pedals up to
+  50 Hz. Volume and strength are still set in SimHub.
+- **Live graph** in Bass shakers and Haptic pedals, like the one in ShakeIt: the vibration the plugin sends over the last
+  8 seconds, from 0 to 100%, with the maximum, current and minimum Hz on the right. With the switch off, it stays flat.
+- **Colour zones** under Slip Start, Slip Max and the frequency bars (green recommended, yellow with care, red not recommended)
+  and a tick at the default value. The bars no longer reach values that make no sense. Bigger bars, easier to grab.
+- **Live view and Dash Studio overlay:** the RL / RR numbers are replaced by a single percentage at the bottom centre: 0% at Slip Start,
+  100% at Slip Max.
+- The tab only shows the **Bass shakers** and **Haptic pedals** drop-downs when their effect is in SimHub.
+- The bass shaker effect is created in **Mono** (one vibration for the rear axle) instead of four corners; existing ones are changed too.
+- The installer groups the effects as **Shaker / haptic effects** and updates the ones you already have.
+- **Fix:** the haptic pedal effect could stay silent because its formulas were not set to JavaScript. The installer and
+  the plugin now set them to JavaScript.
+- **Uninstalling removes everything**: the effects in ShakeIt and on the haptic pedals, the plugin settings and setups,
+  and the backups made by the installer. Your other effects are not touched.
+
 ### 0.3.2
 - **Bass shakers and haptic pedals, on equal terms:** the plugin, the installer and the guide now treat both the same way.
   The installer option is now **Haptic pedal effect** (for example Simagic) and works with any haptic pedals set up in SimHub.
@@ -50,6 +72,28 @@
 ---
 
 ## Español
+
+### 0.3.3
+- **Todo en un solo sitio**: la configuración queda siempre abierta y Overlay de Dash Studio, Bass shakers y Pedales hápticos
+  son **desplegables** que abres y cierras. Cerrados muestran un resumen, y el plugin recuerda cuáles dejaste abiertos.
+- **Interruptor on/off** en la cabecera de cada desplegable. En bass shakers y pedales hápticos activa o desactiva el efecto
+  **directamente en SimHub** (ShakeIt y Dispositivos), así que lo ves allí al momento.
+- **Bass shakers** y **Pedales hápticos**: frecuencia mínima y máxima con **una barra de dos tiradores**. El plugin las escribe
+  directamente en el efecto de SimHub (Frequency y High frequency), sin forzar frecuencias. Pedales hápticos hasta 50 Hz.
+  El volumen y la fuerza se siguen ajustando en SimHub.
+- **Gráfica en vivo** en Bass shakers y Pedales hápticos, como la de ShakeIt: la vibración que manda el plugin en los
+  últimos 8 segundos, de 0 a 100%, con los Hz máximo, actual y mínimo a la derecha. Con el interruptor apagado se queda plana.
+- **Zonas de color** bajo Slip Start, Slip Max y las barras de frecuencia (verde recomendado, amarillo con cuidado, rojo no
+  recomendable) y una raya en el valor por defecto. Las barras ya no llegan a valores sin sentido. Barras más grandes, más fáciles de mover.
+- **Vista en vivo y overlay de Dash Studio:** los números TI / TD se sustituyen por un solo porcentaje abajo en el centro: 0% en Slip Start,
+  100% en Slip Max.
+- La pestaña solo muestra los desplegables de **Bass shakers** y **Pedales hápticos** si su efecto está en SimHub.
+- El efecto de bass shakers se crea en **Mono** (una sola vibración para el tren trasero) en vez de cuatro esquinas; los que ya existen también se cambian.
+- El instalador agrupa los efectos como **Efectos para shakers / hápticos** y pone al día los que ya tienes.
+- **Corrección:** el efecto de los pedales hápticos podía no vibrar porque sus fórmulas no estaban en JavaScript.
+  El instalador y el plugin las ponen ahora en JavaScript.
+- **Al desinstalar se borra todo**: los efectos de ShakeIt y de los pedales hápticos, los ajustes y setups del plugin
+  y las copias de seguridad del instalador. Tus otros efectos no se tocan.
 
 ### 0.3.2
 - **Bass shakers y pedales hápticos, al mismo nivel:** el plugin, el instalador y la guía tratan los dos por igual.
