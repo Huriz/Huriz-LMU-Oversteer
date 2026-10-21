@@ -21,7 +21,7 @@
 - **Live view and Dash Studio overlay:** the RL / RR numbers are replaced by a single percentage at the bottom centre: 0% at Slip Start,
   100% at Slip Max.
 - The tab only shows the **Bass shakers** and **Haptic pedals** drop-downs when their effect is in SimHub.
-- The bass shaker effect is created in **Mono** (one vibration for the rear axle) instead of four corners; existing ones are changed too.
+- The bass shaker effect is created in **Front/Rear** mode instead of four corners: it plays on your **rear** shakers and leaves the front ones free for other effects. Existing ones are changed too. With a single body shaker, assign it to the rear in ShakeIt.
 - The installer groups the effects as **Shaker / haptic effects** and updates the ones you already have.
 - **Fix:** the haptic pedal effect could stay silent because its formulas were not set to JavaScript. The installer and
   the plugin now set them to JavaScript.
@@ -88,7 +88,7 @@
 - **Vista en vivo y overlay de Dash Studio:** los números TI / TD se sustituyen por un solo porcentaje abajo en el centro: 0% en Slip Start,
   100% en Slip Max.
 - La pestaña solo muestra los desplegables de **Bass shakers** y **Pedales hápticos** si su efecto está en SimHub.
-- El efecto de bass shakers se crea en **Mono** (una sola vibración para el tren trasero) en vez de cuatro esquinas; los que ya existen también se cambian.
+- El efecto de bass shakers se crea en modo **Front/Rear** en vez de cuatro esquinas: suena en tus shakers **traseros** y deja libres los delanteros para otros efectos. Los que ya existen también se cambian. Con un solo body shaker, asígnalo a detrás en ShakeIt.
 - El instalador agrupa los efectos como **Efectos para shakers / hápticos** y pone al día los que ya tienes.
 - **Corrección:** el efecto de los pedales hápticos podía no vibrar porque sus fórmulas no estaban en JavaScript.
   El instalador y el plugin las ponen ahora en JavaScript.

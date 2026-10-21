@@ -78,7 +78,8 @@ spinning under power (wheelspin), and it switches off if the telemetry refresh i
    - **Dash Studio overlay** – ticked.
 5. Open SimHub and enable the **Huriz - LMU Oversteer** plugin when it asks.
 6. You will find the **Huriz - LMU Oversteer** effect:
-   - **Bass shakers:** in ShakeIt. Check that the effect reaches your shaker (one body shaker is enough).
+   - **Bass shakers:** in ShakeIt, in **Front/Rear** mode: it plays on your **rear** shakers. One body shaker is enough,
+     as long as it is assigned to the rear in ShakeIt.
    - **Haptic pedals:** in SimHub > Devices > your pedals > Effects.
 
 **Updating from LMU - Rear Slip Pro:** just run the new installer. It removes the old plugin and keeps your
@@ -211,7 +212,7 @@ Save one set of settings for each car and load it with one click.
   installer again: the haptic option shows "detected" in green when it finds them.
 - **No vibration.** Check that the plugin is enabled in SimHub, that the game is running, and that the switch of that
   output is on in the plugin tab. The live graph and the live view should react when the rear slides. On bass
-  shakers, the effect must also reach your shaker in ShakeIt.
+  shakers, the effect plays on the **rear** shakers: if you have a single shaker, assign it to the rear in ShakeIt.
 - **Bass shakers or Haptic pedals don't appear in the plugin tab.** The plugin can't find its effect in SimHub.
   Close SimHub and run the installer again with that option ticked.
 - **The frequencies in ShakeIt don't match the plugin.** Set them in the plugin tab: it writes them into the effect.
@@ -243,7 +244,7 @@ Properties published by the plugin (search "HurizOversteer" in SimHub):
 | `Debug.ABS`, `Debug.TC` | ABS / traction control acting |
 | `Overlay.Image` | Path of the latest overlay image (used by the Dash Studio template) |
 
-The effect created in ShakeIt is a Mono Custom effect (JavaScript) that returns `$prop('HurizOversteerPlugin.Shaker.RL')`
+The effect created in ShakeIt is a Front/Rear Custom effect (JavaScript) that returns `$prop('HurizOversteerPlugin.Shaker.RL')`
 and `$prop('HurizOversteerPlugin.Shaker.RR')` on the rear channels; on the haptic pedals it uses `Haptic.RL` and `Haptic.RR`.
 
 ### Uninstall
@@ -331,7 +332,8 @@ ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetr
    - **Overlay de Dash Studio** – marcado.
 5. Abre SimHub y activa el plugin **Huriz - LMU Oversteer** cuando lo pida.
 6. Encontrarás el efecto **Huriz - LMU Oversteer**:
-   - **Bass shakers:** en ShakeIt. Comprueba que el efecto llega a tu shaker (basta con un body shaker).
+   - **Bass shakers:** en ShakeIt, en modo **Front/Rear**: suena en tus shakers **traseros**. Basta con un body shaker,
+     siempre que esté asignado a detrás en ShakeIt.
    - **Pedales hápticos:** en SimHub > Dispositivos > tus pedales > Efectos.
 
 **Si vienes de LMU - Rear Slip Pro:** basta con ejecutar el instalador nuevo. Quita el plugin viejo y conserva tus
@@ -465,7 +467,7 @@ Guarda un ajuste para cada coche y cárgalo con un clic.
   vuelve a ejecutar el instalador: la opción de hápticos sale "detectado" en verde cuando los encuentra.
 - **No vibra.** Comprueba que el plugin está activado en SimHub, que el juego está en marcha y que el interruptor de
   esa salida está encendido en la pestaña del plugin. La gráfica y la vista en vivo deberían reaccionar cuando la
-  zaga se va. En bass shakers, el efecto también debe llegar a tu shaker en ShakeIt.
+  zaga se va. En bass shakers, el efecto suena en los shakers **traseros**: si tienes uno solo, asígnalo a detrás en ShakeIt.
 - **Bass shakers o Pedales hápticos no salen en la pestaña del plugin.** El plugin no encuentra su efecto en SimHub.
   Cierra SimHub y vuelve a ejecutar el instalador con esa casilla marcada.
 - **Las frecuencias de ShakeIt no coinciden con las del plugin.** Ajústalas en la pestaña del plugin: las escribe en
@@ -497,7 +499,7 @@ Propiedades que publica el plugin (busca "HurizOversteer" en SimHub):
 | `Debug.ABS`, `Debug.TC` | ABS / control de tracción actuando |
 | `Overlay.Image` | Ruta de la última imagen del overlay (la usa la plantilla de Dash Studio) |
 
-El efecto que se crea en ShakeIt es un Custom effect en Mono (JavaScript) que devuelve `$prop('HurizOversteerPlugin.Shaker.RL')`
+El efecto que se crea en ShakeIt es un Custom effect en Front/Rear (JavaScript) que devuelve `$prop('HurizOversteerPlugin.Shaker.RL')`
 y `$prop('HurizOversteerPlugin.Shaker.RR')` en los canales traseros; en los pedales hápticos usa `Haptic.RL` y `Haptic.RR`.
 
 ### Desinstalar
