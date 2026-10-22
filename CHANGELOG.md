@@ -6,6 +6,14 @@
 
 ## English
 
+### 0.3.5
+- **Fix:** after a slide, the vibration could keep going on haptic pedals (for example Simagic) until you paused the game.
+  The effect faded out but never reached exactly 0, and the haptic motor vibrates with any value above 0.
+  Now it goes straight to 0 once it drops below 0.5%.
+- **Anticipation** *(Pro)* now follows your **Slip Start**: the heads-up can start at 80% of it (2.4° with 3°, 4° with 5°).
+  Before, it could start from 2.5° whatever your Slip Start was, too early with high values.
+- No end date: this version keeps working with no time limit.
+
 ### 0.3.4
 - **High priority** switch in Bass shakers and Haptic pedals, synced with the "High priority" option of the effect in SimHub:
   while it vibrates, it takes precedence over your other SimHub effects so it feels clearer. On by default.
@@ -79,6 +87,14 @@
 ---
 
 ## Español
+
+### 0.3.5
+- **Corrección:** después de un derrape, la vibración podía seguir en los pedales hápticos (por ejemplo Simagic) hasta pausar
+  el juego. El efecto se iba apagando pero nunca llegaba a 0 exacto, y el motor háptico vibra con cualquier valor mayor que 0.
+  Ahora pasa directamente a 0 cuando baja del 0,5%.
+- **Anticipación** *(Pro)* sigue ahora a tu **Slip Start**: el aviso puede empezar al 80% de ese valor (2,4° con 3°, 4° con 5°).
+  Antes podía empezar desde 2,5° fuera cual fuera tu Slip Start, demasiado pronto con valores altos.
+- Sin fecha de fin: esta versión funciona sin límite de tiempo.
 
 ### 0.3.4
 - Interruptor **Prioridad alta** en Bass shakers y Pedales hápticos, sincronizado con la opción "High priority" del efecto en

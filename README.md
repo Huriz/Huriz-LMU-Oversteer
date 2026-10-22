@@ -12,8 +12,7 @@ A **SimHub plugin for Le Mans Ultimate** that makes your **bass shakers** and yo
 when the rear wheels lose grip (rear-end slides). It works with **ShakeIt Bass Shakers** and with any haptic
 pedals set up in SimHub (for example Simagic).
 
-> **Version 0.3.4** works until **12/12/2026** (12 December 2026). After that
-> the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
+> **Version 0.3.5**, with no time limit. Feedback and bug reports are welcome in the *Issues* tab.
 
 [![Demo video: the plugin running in Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
 
@@ -140,7 +139,8 @@ Open it from the **Guide** button in the plugin tab.
   Below 1 the effect rises fast at first and flattens; above 1 it rises gently first and strongly at the end.
   Default 0.5.
 - **Anticipation** *(Pro)* – a small amount of vibration (as % of the maximum) when slip grows quickly,
-  just before the effect officially starts. A "heads-up" that the rear is about to go. Default 10%.
+  just before the effect officially starts. A "heads-up" that the rear is about to go. It can start at 80% of your
+  Slip Start (2.4° with 3°). Default 10%; 0% = nothing below Slip Start.
 - **Suspension influence** *(Pro)* – extra boost from suspension bounce, up to the percentage you set.
   With 50% and a lot of bounce the output can rise up to x1.5. 0 = no boost. Default 50%.
 - **Throttle limit** *(Pro)* – above this throttle the effect switches off, with a short fade of about 5%.
@@ -220,7 +220,9 @@ Save one set of settings for each car and load it with one click.
   Close SimHub and run the installer again with that option ticked.
 - **The frequencies in ShakeIt don't match the plugin.** Set them in the plugin tab: it writes them into the effect.
   If you change them in ShakeIt, the plugin puts its own values back the next time you open its tab.
-- **The tab says this version expired.** This build stops working on its date. Download the latest release.
+- **The tab says this version expired.** Versions before 0.3.5 stop working on a date. Download the latest release,
+  which has no time limit.
+- **The haptic pedal keeps vibrating after a slide until you pause the game.** Fixed in 0.3.5: update to the latest release.
 - **The car in the live view swings to the wrong side.** Tell us in *Issues*; it is a one-line fix.
 - **"Windows protected your PC".** The installer is not code-signed. Click *More info* and *Run anyway*.
 - **The overlay is not in Dash Studio.** Close SimHub and run the installer again with the Dash Studio option ticked. The plugin tab says whether the template is installed.
@@ -269,8 +271,7 @@ Plugin de SimHub para **Le Mans Ultimate** que hace vibrar tus **bass shakers** 
 las ruedas traseras pierden agarre (derrape de la zaga). Funciona con **ShakeIt Bass Shakers** y con cualquier
 pedal háptico configurado en SimHub (por ejemplo Simagic).
 
-> **Versión 0.3.4.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
-> se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
+> **Versión 0.3.5**, sin límite de tiempo. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
 [![Vídeo de demostración: el plugin funcionando en Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
 
@@ -398,7 +399,8 @@ si no). Solo añade una plantilla a SimHub: nunca cambia tus diseños de overlay
   Menos de 1: sube rápido al principio y se aplana. Más de 1: sube suave al principio y fuerte al final.
   Por defecto 0,5.
 - **Anticipación** *(Pro)* – una pequeña vibración (en % del máximo) cuando el slip crece rápido, justo antes de
-  que empiece el efecto. Es un aviso de que la zaga está a punto de irse. Por defecto 10%.
+  que empiece el efecto. Es un aviso de que la zaga está a punto de irse. Puede empezar al 80% de tu Slip Start
+  (2,4° con 3°). Por defecto 10%; con 0% no hay nada por debajo de Slip Start.
 - **Influencia de suspensión** *(Pro)* – refuerzo extra por el bote de la suspensión, hasta el porcentaje que
   pongas. Con 50% y mucho bote la salida puede subir hasta x1,5. 0 = sin refuerzo. Por defecto 50%.
 - **Límite de gas** *(Pro)* – con más gas que este valor el efecto se apaga, con una transición corta de
@@ -478,7 +480,9 @@ Guarda un ajuste para cada coche y cárgalo con un clic.
   Cierra SimHub y vuelve a ejecutar el instalador con esa casilla marcada.
 - **Las frecuencias de ShakeIt no coinciden con las del plugin.** Ajústalas en la pestaña del plugin: las escribe en
   el efecto. Si las cambias en ShakeIt, el plugin vuelve a poner las suyas la próxima vez que abres su pestaña.
-- **La pestaña dice que esta versión caducó.** Esta versión deja de funcionar en su fecha. Descarga la última release.
+- **La pestaña dice que esta versión caducó.** Las versiones anteriores a la 0.3.5 dejan de funcionar en una fecha.
+  Descarga la última release, que no tiene límite de tiempo.
+- **El pedal háptico sigue vibrando después de un derrape hasta que pausas el juego.** Corregido en la 0.3.5: actualiza a la última release.
 - **El coche de la vista en vivo se mueve hacia el lado contrario.** Avísanos en *Issues*; se corrige con una línea.
 - **"Windows protegió su PC".** El instalador no está firmado. Pulsa *Más información* y *Ejecutar de todas formas*.
 - **El overlay no sale en Dash Studio.** Cierra SimHub y vuelve a ejecutar el instalador con la casilla de Dash Studio marcada. La pestaña del plugin dice si la plantilla está instalada.
