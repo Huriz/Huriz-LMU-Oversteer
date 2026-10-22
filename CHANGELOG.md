@@ -6,6 +6,13 @@
 
 ## English
 
+### 0.3.4
+- **High priority** switch in Bass shakers and Haptic pedals, synced with the "High priority" option of the effect in SimHub:
+  while it vibrates, it takes precedence over your other SimHub effects so it feels clearer. On by default.
+- The installer says clearly that the haptic pedal effect has only been tested with **Simagic** pedals.
+- **Uninstalling now really removes your profiles:** it also deletes the copies of the plugin settings that SimHub keeps
+  in its own backup folder. Before, SimHub restored your setups after reinstalling.
+
 ### 0.3.3
 - **Everything in one place**: the settings stay open and Dash Studio overlay, Bass shakers and Haptic pedals are
   **drop-downs** you open and close. Closed, they show a summary, and the plugin remembers which ones you left open.
@@ -72,6 +79,13 @@
 ---
 
 ## Español
+
+### 0.3.4
+- Interruptor **Prioridad alta** en Bass shakers y Pedales hápticos, sincronizado con la opción "High priority" del efecto en
+  SimHub: mientras vibra, tiene preferencia sobre los demás efectos de SimHub y se nota más claro. Activado por defecto.
+- El instalador indica claramente que el efecto para pedales hápticos solo está probado con pedales **Simagic**.
+- **Al desinstalar ahora sí se borran tus perfiles:** también se borran las copias de los ajustes del plugin que SimHub guarda
+  en su propia carpeta de copias de seguridad. Antes, SimHub recuperaba tus setups al reinstalar.
 
 ### 0.3.3
 - **Todo en un solo sitio**: la configuración queda siempre abierta y Overlay de Dash Studio, Bass shakers y Pedales hápticos

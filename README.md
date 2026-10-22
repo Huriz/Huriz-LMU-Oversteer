@@ -12,7 +12,7 @@ A **SimHub plugin for Le Mans Ultimate** that makes your **bass shakers** and yo
 when the rear wheels lose grip (rear-end slides). It works with **ShakeIt Bass Shakers** and with any haptic
 pedals set up in SimHub (for example Simagic).
 
-> **Version 0.3.3** works until **12/12/2026** (12 December 2026). After that
+> **Version 0.3.4** works until **12/12/2026** (12 December 2026). After that
 > the effect switches off. Feedback and bug reports are welcome in the *Issues* tab.
 
 [![Demo video: the plugin running in Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
@@ -73,8 +73,8 @@ spinning under power (wheelspin), and it switches off if the telemetry refresh i
 4. Choose what to install:
    - **Plugin** – always installed.
    - **Bass shaker effect** (ShakeIt Bass Shakers) – ticked.
-   - **Haptic pedal effect** – when SimHub has haptic pedals, for example Simagic ("detected" in green, "not detected" in red).
-     It is created on the throttle pedal only; you can change it later in SimHub (Devices > your pedals > Effects).
+   - **Haptic pedal effect** – when SimHub has haptic pedals ("detected" in green, "not detected" in red).
+     **Tested only with Simagic haptic pedals**; other brands have not been tested. It is created on the throttle pedal only; you can change it later in SimHub (Devices > your pedals > Effects).
    - **Dash Studio overlay** – ticked.
 5. Open SimHub and enable the **Huriz - LMU Oversteer** plugin when it asks.
 6. You will find the **Huriz - LMU Oversteer** effect:
@@ -173,6 +173,9 @@ effect is in SimHub, so you only see what you have.
   haptic pedals (they only go up to 50 Hz).
 - **Live graph** – the vibration the plugin sends over the last 8 seconds, from 0 to 100%. On the right: the
   maximum Hz, the current Hz (while it vibrates) and the minimum Hz. With the switch off it stays flat.
+- **High priority** (bass shakers and haptic pedals) – while it vibrates, the effect takes precedence over your other
+  SimHub effects so it feels clearer. It is the same "High priority" option of the effect in SimHub: changing it here
+  changes it there. On by default.
 - **Status line** – green when the plugin found its effect in SimHub.
 
 **Buttons**
@@ -250,8 +253,8 @@ and `$prop('HurizOversteerPlugin.Shaker.RR')` on the rear channels; on the hapti
 ### Uninstall
 
 Use *Settings > Apps* in Windows (close SimHub first). Uninstalling removes everything the plugin added: the effects in
-ShakeIt and on the haptic pedals, the plugin settings and setups, and the backups made by the installer.
-Your other effects are not touched.
+ShakeIt and on the haptic pedals, the plugin settings and setups (also the copies SimHub keeps in its own backup
+folder), and the backups made by the installer. Your other effects are not touched.
 
 ### License
 
@@ -266,7 +269,7 @@ Plugin de SimHub para **Le Mans Ultimate** que hace vibrar tus **bass shakers** 
 las ruedas traseras pierden agarre (derrape de la zaga). Funciona con **ShakeIt Bass Shakers** y con cualquier
 pedal háptico configurado en SimHub (por ejemplo Simagic).
 
-> **Versión 0.3.3.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
+> **Versión 0.3.4.** Esta versión funciona hasta el **12/12/2026**. Después el efecto
 > se desactiva. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
 [![Vídeo de demostración: el plugin funcionando en Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
@@ -327,8 +330,8 @@ ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetr
 4. Elige qué instalar:
    - **Plugin** – siempre se instala.
    - **Efecto para bass shakers** (ShakeIt Bass Shakers) – marcado.
-   - **Efecto para pedales hápticos** – cuando SimHub tiene pedales hápticos, por ejemplo Simagic ("detectado" en verde, "no detectado" en rojo).
-     Se crea solo en el pedal del acelerador; puedes cambiarlo después en SimHub (Dispositivos > tus pedales > Efectos).
+   - **Efecto para pedales hápticos** – cuando SimHub tiene pedales hápticos ("detectado" en verde, "no detectado" en rojo).
+     **Solo probado con pedales hápticos Simagic**; otras marcas no se han probado. Se crea solo en el pedal del acelerador; puedes cambiarlo después en SimHub (Dispositivos > tus pedales > Efectos).
    - **Overlay de Dash Studio** – marcado.
 5. Abre SimHub y activa el plugin **Huriz - LMU Oversteer** cuando lo pida.
 6. Encontrarás el efecto **Huriz - LMU Oversteer**:
@@ -428,6 +431,9 @@ en SimHub, así ves solo lo que tienes.
   shakers y 45–50 Hz en pedales hápticos (solo llegan hasta 50 Hz).
 - **Gráfica en vivo** – la vibración que manda el plugin en los últimos 8 segundos, de 0 a 100%. A la derecha: los Hz
   máximos, los de ahora (mientras vibra) y los mínimos. Con el interruptor apagado se queda plana.
+- **Prioridad alta** (bass shakers y pedales hápticos) – mientras vibra, el efecto tiene preferencia sobre los demás
+  efectos de SimHub y se nota más claro. Es la misma opción "High priority" del efecto en SimHub: si la cambias aquí,
+  cambia allí. Activada por defecto.
 - **Línea de estado** – en verde cuando el plugin ha encontrado su efecto en SimHub.
 
 **Botones**
@@ -505,8 +511,8 @@ y `$prop('HurizOversteerPlugin.Shaker.RR')` en los canales traseros; en los peda
 ### Desinstalar
 
 Desde *Configuración > Aplicaciones* de Windows (cierra SimHub antes). Al desinstalar se borra todo lo que añadió el
-plugin: los efectos de ShakeIt y de los pedales hápticos, los ajustes y setups del plugin y las copias de seguridad
-del instalador. Tus otros efectos no se tocan.
+plugin: los efectos de ShakeIt y de los pedales hápticos, los ajustes y setups del plugin (también las copias que
+SimHub guarda en su propia carpeta de copias de seguridad) y las copias de seguridad del instalador. Tus otros efectos no se tocan.
 
 ### Licencia
 
