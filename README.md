@@ -57,6 +57,7 @@ spinning under power (wheelspin), and it switches off if the telemetry refresh i
 - Creates the **Huriz - LMU Oversteer** effect for **bass shakers** in ShakeIt (50 Hz base, 60 Hz high, high priority).
 - Creates the same effect for **haptic pedals** (for example Simagic), on the throttle pedal (45 Hz base, 50 Hz high).
 - English and Spanish interface.
+- **New version notice:** it tells you in its tab when a newer version is out (it checks GitHub at most once a day and sends no data; without internet it does nothing).
 
 ### Requirements
 
@@ -114,6 +115,8 @@ Open it from the **Guide** button in the plugin tab.
 **The tab, from top to bottom**
 
 - **Loaded profile** (green, next to the title) – the setup that is currently loaded.
+- **New version strip** (blue, under the title) – appears only when a newer version is out. **Download** opens the
+  release page; **Don't remind me about this version** hides it until the next one.
 - **Simple / Pro** – Simple shows only Slip Start and Slip Max. Pro adds the rest. Switching between them
   never loses your values, because both modes use the same settings.
 - **ES / EN** – language of the tab. It follows Windows by default.
@@ -316,6 +319,7 @@ ruedas patinan por potencia (wheelspin) y se apaga si el refresco de la telemetr
 - Crea solo el efecto **Huriz - LMU Oversteer** para **bass shakers** en ShakeIt (50 Hz base, 60 Hz alta, prioridad alta).
 - Crea el mismo efecto para **pedales hápticos** (por ejemplo Simagic), en el acelerador (45 Hz base, 50 Hz alta).
 - Interfaz en español e inglés.
+- **Aviso de versión nueva:** te avisa en su pestaña cuando sale una versión más nueva (mira en GitHub como mucho una vez al día y no envía ningún dato; sin internet no hace nada).
 
 ### Requisitos
 
@@ -373,6 +377,8 @@ si no). Solo añade una plantilla a SimHub: nunca cambia tus diseños de overlay
 **La pestaña, de arriba abajo**
 
 - **Perfil cargado** (verde, junto al título) – el setup que está cargado ahora.
+- **Franja de versión nueva** (azul, bajo el título) – solo aparece cuando hay una versión más nueva. **Descargar** abre
+  la página de la release; **No avisar de esta versión** la oculta hasta la siguiente.
 - **Simple / Pro** – Simple muestra solo Slip Start y Slip Max. Pro añade el resto. Cambiar de uno a otro
   no pierde tus valores, porque los dos modos usan los mismos ajustes.
 - **ES / EN** – idioma de la pestaña. Por defecto sigue el de Windows.
