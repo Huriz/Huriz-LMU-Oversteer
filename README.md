@@ -114,7 +114,8 @@ Open it from the **Guide** button in the plugin tab.
 
 **The tab, from top to bottom**
 
-- **Loaded profile** (green, next to the title) – the setup that is currently loaded.
+- **Loaded profile** (green, on the right of the header) – the setup that is currently loaded. With a narrow window it
+  moves to its own line.
 - **Check for updates** (next to the version) – checks GitHub right away for a newer version and tells you the result.
 - **New version strip** (blue, under the title) – appears only when a newer version is out. **Download** opens the
   release page; **Don't remind me about this version** hides it until the next one.
@@ -377,7 +378,8 @@ si no). Solo añade una plantilla a SimHub: nunca cambia tus diseños de overlay
 
 **La pestaña, de arriba abajo**
 
-- **Perfil cargado** (verde, junto al título) – el setup que está cargado ahora.
+- **Perfil cargado** (verde, a la derecha de la cabecera) – el setup que está cargado ahora. Con la ventana estrecha
+  baja a su propia línea.
 - **Buscar actualizaciones** (junto a la versión) – mira en GitHub al momento si hay una versión más nueva y te dice el resultado.
 - **Franja de versión nueva** (azul, bajo el título) – solo aparece cuando hay una versión más nueva. **Descargar** abre
   la página de la release; **No avisar de esta versión** la oculta hasta la siguiente.

@@ -16,6 +16,8 @@
   vibrating until you paused the game. Now it goes straight to 0 once it drops below 0.5%.
 - **Anticipation** *(Pro)* now follows your **Slip Start**: the heads-up can start at 80% of it (2.4° with 3°, 4° with 5°).
   Before, it could start from 2.5° whatever your Slip Start was, too early with high values.
+- **Loaded profile** now sits on the right of the header, in line with the language and Guide buttons. With a narrow
+  window it moves to its own line instead of overlapping anything.
 - No end date: this version keeps working with no time limit.
 
 ### 0.3.4
@@ -102,6 +104,8 @@
   hápticos (por ejemplo Simagic) seguían vibrando hasta pausar el juego. Ahora pasa directamente a 0 cuando baja del 0,5%.
 - **Anticipación** *(Pro)* sigue ahora a tu **Slip Start**: el aviso puede empezar al 80% de ese valor (2,4° con 3°, 4° con 5°).
   Antes podía empezar desde 2,5° fuera cual fuera tu Slip Start, demasiado pronto con valores altos.
+- **Perfil cargado** va ahora a la derecha de la cabecera, en línea con los botones de idioma y Guía. Con la ventana
+  estrecha baja a su propia línea en vez de solaparse con nada.
 - Sin fecha de fin: esta versión funciona sin límite de tiempo.
 
 ### 0.3.4
