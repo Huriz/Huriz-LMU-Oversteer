@@ -12,7 +12,7 @@ A **SimHub plugin for Le Mans Ultimate** that makes your **bass shakers** and yo
 when the rear wheels lose grip (rear-end slides). It works with **ShakeIt Bass Shakers** and with any haptic
 pedals set up in SimHub (for example Simagic).
 
-> **Version 0.4.0**, with no time limit. Feedback and bug reports are welcome in the *Issues* tab.
+> **Version 0.3.5**, with no time limit. Feedback and bug reports are welcome in the *Issues* tab.
 
 [![Demo video: the plugin running in Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
 
@@ -275,7 +275,7 @@ Plugin de SimHub para **Le Mans Ultimate** que hace vibrar tus **bass shakers** 
 las ruedas traseras pierden agarre (derrape de la zaga). Funciona con **ShakeIt Bass Shakers** y con cualquier
 pedal háptico configurado en SimHub (por ejemplo Simagic).
 
-> **Versión 0.4.0**, sin límite de tiempo. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
+> **Versión 0.3.5**, sin límite de tiempo. Los comentarios y fallos son bienvenidos en la pestaña *Issues*.
 
 [![Vídeo de demostración: el plugin funcionando en Le Mans Ultimate](media/demo-2m33.webp)](https://www.youtube.com/watch?v=8viDyta5et0)
 
