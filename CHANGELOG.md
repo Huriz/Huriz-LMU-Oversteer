@@ -6,6 +6,10 @@
 
 ## English
 
+### 0.4.0
+- Maintenance version, no changes to the effect. If you have 0.3.5 with the **new version notice**, the plugin tab
+  tells you about this one.
+
 ### 0.3.5
 - **New version notice:** when SimHub starts, the plugin checks on GitHub (at most once a day) whether there is a newer
   version. If there is, a blue strip appears at the top of the plugin tab with a **Download** button and a
@@ -91,6 +95,10 @@
 ---
 
 ## Español
+
+### 0.4.0
+- Versión de mantenimiento, sin cambios en el efecto. Si tienes la 0.3.5 con el **aviso de versión nueva**, la pestaña
+  del plugin te avisa de esta.
 
 ### 0.3.5
 - **Aviso de versión nueva:** al arrancar SimHub, el plugin mira en GitHub (como mucho una vez al día) si hay una versión
