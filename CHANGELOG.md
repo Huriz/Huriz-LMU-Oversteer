@@ -14,7 +14,7 @@
 - **New version notice:** when SimHub starts, the plugin checks on GitHub (at most once a day) whether there is a newer
   version. If there is, a blue strip appears at the top of the plugin tab with a **Download** button and a
   **Don't remind me about this version** button. It only asks for the latest version number and sends no data.
-  Without internet it simply does nothing.
+  Without internet it simply does nothing. The **Check for updates** button, next to the version, checks right away.
 - **Fix:** after a slide, the effect faded out but never reached exactly 0: it kept tiny values on **both** the bass
   shaker and the haptic pedal outputs. On bass shakers it was silent, but haptic pedals (for example Simagic) kept
   vibrating until you paused the game. Now it goes straight to 0 once it drops below 0.5%.
@@ -104,7 +104,7 @@
 - **Aviso de versión nueva:** al arrancar SimHub, el plugin mira en GitHub (como mucho una vez al día) si hay una versión
   más nueva. Si la hay, aparece una franja azul arriba en la pestaña del plugin con un botón **Descargar** y otro
   **No avisar de esta versión**. Solo pide el número de la última versión y no envía ningún dato. Sin internet,
-  simplemente no hace nada.
+  simplemente no hace nada. El botón **Buscar actualizaciones**, junto a la versión, lo comprueba al momento.
 - **Corrección:** después de un derrape, el efecto se iba apagando pero nunca llegaba a 0 exacto: quedaban restos diminutos
   **tanto** en la salida de bass shakers como en la de pedales hápticos. En los bass shakers no se oía, pero los pedales
   hápticos (por ejemplo Simagic) seguían vibrando hasta pausar el juego. Ahora pasa directamente a 0 cuando baja del 0,5%.
